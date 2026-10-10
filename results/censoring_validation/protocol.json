@@ -1,0 +1,16 @@
+{
+  "case_count": 5184,
+  "structural_scenarios": 108,
+  "seeds": 12,
+  "controllers": [
+    "collective",
+    "occupancy_aware",
+    "access_priority",
+    "distance_only_nearest"
+  ],
+  "arrival_horizon": 3600,
+  "observation_horizon": 4500,
+  "restricted_wait_horizon": 900,
+  "stopping_rule": "One execution of the declared grid; no tuning or reruns based on performance. Smoke checks are separate.",
+  "design_note": "Matched arrival streams. Same archived movement, no door dwell or physical dynamics. Distinct distance-only nearest-car baseline is a transparent reference rule, not a reproduction of an entire published system. Fixed carrying/noise levels; diagonal floor/lift combinations restrict generality. Original accessibility/stability accounting is retained only to reproduce archived code; no comfort claims or disability-instability inference is made."
+}

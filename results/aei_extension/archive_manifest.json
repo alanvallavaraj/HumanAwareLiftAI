@@ -1,0 +1,8 @@
+{
+  "filename": "passenger-events.tar.xz",
+  "bytes": 50164664,
+  "sha256": "2655703d6228cb0be8938716e70885f96931885ec16615cf5ddb2d582457db63",
+  "format": "xz-compressed tar of per-case uncompressed CSV",
+  "event_files": 16848,
+  "restoration": "Per-case CSV content is lossless; gzip headers and filesystem ownership are not research data."
+}

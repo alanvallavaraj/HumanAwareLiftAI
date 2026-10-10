@@ -1,0 +1,61 @@
+\section{Experiment history}\label{app:history}
+\setcounter{table}{0}\renewcommand{\thetable}{A.\arabic{table}}\renewcommand{\theHtable}{A.\arabic{table}}
+Table~\ref{tab:history} distinguishes completed executions from merged tables and reanalyses. Historical stages overlap in scenarios and seeds; they are not independent confirmations. Filtering, hardware, sensing and interaction experiments were not run and are not listed.
+\begin{longtable}{@{}p{.36\linewidth}rp{.42\linewidth}@{}}
+\caption{Retained execution and analysis history.}\label{tab:history}\\
+\toprule Stage & Runs or rows & Interpretation\\\midrule\endhead
+\bottomrule\endlastfoot
+Initial smoke & 12 & Pipeline execution\\
+Second smoke & 12 & Repeated pipeline execution\\
+Pilot & 7,680 & Six retained configurations\\
+Reduced main & 122,472 & Seven configurations, six seeds\\
+Layered follow-up & 17,496 & One added configuration, six seeds\\
+Combined reduced table & 139,968 & Merge only; no new execution\\
+Historical factorial campaign & 279,936 & Eight configurations, twelve seeds\\
+Historical validation & 279,936 reused & Descriptive reanalysis\\
+Packaging smoke & 12 & Execution check\\
+Archived-case spot checks & 8 & Selected case replay\\
+Event-recording smoke & 4 & Instrumentation check\\
+Legacy event-recording campaign & 5,184 & Superseded; \ref{app:legacy}\\
+Event-file recovery & 1 replay & Corrupt record recovery; aggregates unchanged\\
+Corrected-model smoke & 26 & Development check; not part of the main grid\\
+Corrected matched-arrival campaign & 16,848 & Thirteen configurations; 22,998,183 passenger records\\
+Horizon reanalysis & 7,776 reused & Six corrected configurations; no new simulation\\
+Replay parity, Python 3.9.6 & 3,888 replayed & All match the historical archive\\
+Replay parity, Python 3.11.15 & 3,888 replayed & 3,105 match the historical archive\\
+\end{longtable}
+Controller means, group outcomes, scenario intervals, horizon sensitivity, censored-wait sensitivity and the replay-parity records are deposited with the versioned releases \cite{dataset}. The historical source snapshot was collected after the run; \ref{app:legacy} shows that it reproduces the archived outputs.
+
+\section{Legacy event-recording campaign}\label{app:legacy}
+\setcounter{table}{0}\renewcommand{\thetable}{B.\arabic{table}}\renewcommand{\theHtable}{B.\arabic{table}}
+Before the corrected model was fixed, a 5,184-run campaign recorded passenger events with the legacy simulator for the same 108 scenarios and twelve seeds as Section~\ref{sec:design}. It compared the collective reference, the occupancy rule, the priority rule and the distance-only nearest car, retained 7,076,364 passenger records, and ran on a local workstation with eight Python worker processes (Python 3.12.14). It is superseded for three reasons: the legacy simulator retains stale targets, it draws tie-breaks from configuration-specific random streams (Section~\ref{sec:design}), and its priority rule adds the occupancy and priority terms together relative to the collective reference, so the contrast does not isolate priority.
+
+Tables~\ref{tab:legacy-restricted} and~\ref{tab:legacy-contrasts} summarise the results. The direction of the service-allocation effect matches the corrected model: priority requests wait less and general requests wait longer. The magnitudes differ. Relative to collective dispatch, the general-request cost is 23.43 units here and 4.66 units in the corrected model without delays, and the overall difference is $+7.47$ ($[-2.87,19.24]$) here and $-8.73$ ($[-12.01,-5.73]$) in the corrected model. The legacy values are therefore not used as evidence in the main text.
+
+\begin{longtable}{@{}p{.30\linewidth}rrrr@{}}
+\caption{Legacy-model restricted waits (900 model time units) over all generated passengers and mean run-level completion.}\label{tab:legacy-restricted}\\
+\toprule Configuration & All & Priority & General & Completion (\%)\\\midrule\endhead
+\bottomrule\endlastfoot
+Priority rule & 294.23 & 99.06 & 310.48 & 82.31\\
+Collective reference & 286.77 & 283.38 & 287.05 & 84.04\\
+Distance-only nearest car & 303.32 & 299.84 & 303.65 & 83.77\\
+Occupancy rule & 297.79 & 294.06 & 298.09 & 82.66\\
+\end{longtable}
+
+\begin{longtable}{@{}p{.28\linewidth}p{.30\linewidth}rp{.20\linewidth}@{}}
+\caption{Legacy-model paired priority-rule contrasts; positive waiting differences indicate longer waits under the priority rule.}\label{tab:legacy-contrasts}\\
+\toprule Reference & Outcome & Difference & 95\% interval\\\midrule\endhead
+\bottomrule\endlastfoot
+Collective reference & All restricted wait & 7.47 & $[-2.87, 19.24]$\\
+Collective reference & Priority restricted wait & $-184.33$ & $[-226.90, -142.33]$\\
+Collective reference & General restricted wait & 23.43 & $[12.26, 35.29]$\\
+Collective reference & Completion (percentage points) & $-1.73$ & $[-3.06, -0.61]$\\
+Distance-only nearest car & All restricted wait & $-9.09$ & $[-26.38, 8.33]$\\
+Distance-only nearest car & Priority restricted wait & $-200.78$ & $[-242.45, -158.27]$\\
+Distance-only nearest car & General restricted wait & 6.83 & $[-11.41, 24.65]$\\
+Distance-only nearest car & Completion (percentage points) & $-1.46$ & $[-3.23, 0.19]$\\
+\end{longtable}
+
+\paragraph{Replay parity} The 3,888 legacy-configuration runs of this campaign were also compared with their counterparts in the 279,936-run historical archive. Under Python 3.12.14, 3,105 matched every archived metric to within $10^{-12}$ and 783 did not. Arrival counts matched in every case, so the differences arise in service dynamics rather than demand. They were concentrated in congested buildings: 642 of 1,296 runs (49.5\%) with eight floors and two cars differed, against 129 (10.0\%) with sixteen floors and four cars and 12 (0.9\%) with thirty-two floors and eight cars. The rate did not depend on configuration (18.8\% to 22.0\%), priority share or seed, and the median absolute difference in mean wait among differing runs was 8.95 units.
+
+The cause is the movement rule of Section~\ref{boarding-and-movement}. A stationary car chooses its nearest target with Python's \texttt{min} over a set of floors, so equidistant targets are resolved by set iteration order, which differs between Python 3.9 and Python 3.11 or later. Equidistant targets are frequent when few cars serve few floors. Replaying the archived post-run code snapshot under Python 3.9.6 reproduced all 3,888 runs on all eighteen archived metrics to within $10^{-12}$, while Python 3.11.15 reproduced the same 3,105 runs as Python 3.12.14. The historical archive is therefore reproducible from its snapshot under Python 3.9. The corrected model shares the movement rule and reproduces under Python 3.11 or later: 30 of 30 sampled eight-floor runs matched the archived outputs under Python 3.11.15, against 13 of 30 under Python 3.9.6. One incomplete legacy event file was recovered by replaying its fixed case, and every aggregate metric matched its original row.

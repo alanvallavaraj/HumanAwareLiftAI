@@ -1,0 +1,5 @@
+# Keep the submitted manuscript out of release archives (and therefore the Zenodo record).
+# The files stay in the repository; see LICENSING.md.
+paper/ export-ignore
+publishing/paper_outline.md export-ignore
+publishing/submission-source.zip export-ignore

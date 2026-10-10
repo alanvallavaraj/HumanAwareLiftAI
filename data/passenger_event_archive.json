@@ -1,0 +1,19 @@
+{
+  "sha256": "cf282f58b2af8a934cf21f8833d8ec80107911e0eb9d68a1aa910d3c7dbd7d26",
+  "bytes": 14805700,
+  "event_files": 5184,
+  "passenger_records": 7076364,
+  "archive_format": "xz-compressed tar of losslessly decompressed per-case CSV; download script restores per-case gzip files",
+  "repository_parts": [
+    {
+      "path": "data/passenger-event-parts/part-001",
+      "bytes": 7500000,
+      "sha256": "4ed44365fbcd507e3048963f1e0a7fcd5b28379f767fb2364d1573d61929a57d"
+    },
+    {
+      "path": "data/passenger-event-parts/part-002",
+      "bytes": 7305700,
+      "sha256": "95ff89421138ca74fec3f3bd35bc223b6d6a36aa766324fe34444ade2d6d8e76"
+    }
+  ]
+}

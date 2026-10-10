@@ -1,0 +1,34 @@
+{
+  "raw_csv": {
+    "rows": 279936,
+    "bytes": 83728698,
+    "sha256": "7654ba08d904362a1f463d9816ed936c83338682571c83b637bb214a37fe740d"
+  },
+  "archive": {
+    "path": "data/historical-results.csv.gz",
+    "sha256": "fece0e4c4032b157aebaff2a96dd7939fd92b1c95fea1da04d44f809d41e3e4d"
+  },
+  "run": {
+    "completed": true,
+    "elapsed": "02:09:11"
+  },
+  "snapshot_limitation": "Code snapshot obtained after completion; contemporaneous execution immutability cannot be independently established.",
+  "source_comparison": {
+    "simulator": "Only one trailing blank line differs from the post-run snapshot.",
+    "runner": "Only portable src import-path setup and one trailing blank line differ; no scenario grid or calculation changes."
+  },
+  "snapshot_file_hashes": {
+    "simulator.py": "dde3a534b87c2933b7480d69380fe7b0d24f7247945698a03c960e8a6f93e0b5",
+    "run_experiments.py": "0ba304f011882f9bb7243049b542869316ffc65e54d83625c5e064c3a3af1af8",
+    "analyse_results.py": "5162ab0c409bb7999152f18e2f3c3ee027fbd200947f9e7a4fdf1f68bf995947",
+    "run_all_one_swing.sh": "557b6aca5d65d389e429c439604d58ce9c9aa98ba3d9f8c9b5eb3aca8e4b3dfe"
+  },
+  "packaged_file_hashes": {
+    "src/simulator.py": "f082fae71dd9e741a52f56f7f22b147b2219cff68087afeea1842fd510ed62f3",
+    "scripts/run_experiments.py": "680ef146e2d020f9ef76aeb125e8ce15eda00c42b632c58b643d83c02a716f27",
+    "data/local-exploratory-results.tar.gz": "db1a768d8acfe62d6b0b105787b7139b7bc5c021c9e7774bb481641cc9be8e39"
+  },
+  "snapshot_archive": "data/historical-code-snapshot.tar.gz",
+  "snapshot_archive_sha256": "3c4083c4c0cbde2683dce7b45ab4c795e39593c67ba23e83ff1bb929abe56227",
+  "snapshot_note": "The snapshot holds the source files of the historical campaign (simulator, runner, analysis script and tier runner); batch-submission scripts and execution logs are not included. Replaying it under Python 3.9.6 reproduces all 3,888 legacy cases checked against the archive (results/censoring_validation/replay_parity_python39.json)."
+}

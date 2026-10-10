@@ -1,0 +1,107 @@
+{
+  "rows": 279936,
+  "structural_clusters": 972,
+  "bootstrap_replicates": 2000,
+  "seed": 20261008,
+  "cluster_keys": [
+    "floors",
+    "lifts",
+    "population",
+    "traffic",
+    "special_share",
+    "carrying_share"
+  ],
+  "noise_levels_and_seeds_resampled_together": true,
+  "method": "Paired percentile bootstrap of structural scenarios, retaining all three noise levels and twelve seeds jointly. Arithmetic finite-value run means except passenger-weighted completion and completed wait. Intervals describe design-scenario composition sensitivity, not physical validity or random-building population inference.",
+  "missing_wait_note": "Raw CSV lacks individual unboarded arrival/end-time records. Bounds and common-value imputation are sensitivity analyses, not recovered censoring-aware estimates. Upper bound applies to waiting accrued by the finite horizon, not eventual waiting beyond it.",
+  "estimates": {
+    "access_priority": {
+      "mean_wait": 350.4436755212867,
+      "p95_wait": 1274.260146604938,
+      "special_mean_wait": 129.41332378230126,
+      "general_mean_wait": 373.66374861971076,
+      "door_crowding_rate": 0.1205290215128788,
+      "fairness_disparity": 2.5241150298991832,
+      "completion_fraction": 0.746117262104286,
+      "passenger_weighted_completed_wait": 252.8850074548316,
+      "ratio_of_group_mean_waits": 0.34633630974464485
+    },
+    "collective": {
+      "mean_wait": 369.53890041016615,
+      "p95_wait": 1275.58267746914,
+      "special_mean_wait": 353.4554730763661,
+      "general_mean_wait": 370.80759826622835,
+      "door_crowding_rate": 0.8542233623541268,
+      "fairness_disparity": 1.0047175545236637,
+      "completion_fraction": 0.7597150174863814,
+      "passenger_weighted_completed_wait": 268.4219143529972,
+      "ratio_of_group_mean_waits": 0.9532045047863232
+    },
+    "human_aware": {
+      "mean_wait": 353.3568265307804,
+      "p95_wait": 1279.7573259602214,
+      "special_mean_wait": 130.6639515241569,
+      "general_mean_wait": 376.6369772078096,
+      "door_crowding_rate": 0.12570872959209417,
+      "fairness_disparity": 2.6739913585370596,
+      "completion_fraction": 0.7451561910105874,
+      "passenger_weighted_completed_wait": 254.65694521403054,
+      "ratio_of_group_mean_waits": 0.3469227915241657
+    },
+    "layered_access_stability": {
+      "mean_wait": 349.87415027567107,
+      "p95_wait": 1276.183341906721,
+      "special_mean_wait": 133.18556890269105,
+      "general_mean_wait": 372.40180824659177,
+      "door_crowding_rate": 0.11928385786995134,
+      "fairness_disparity": 2.478306548439223,
+      "completion_fraction": 0.7445363497725982,
+      "passenger_weighted_completed_wait": 255.77019779957996,
+      "ratio_of_group_mean_waits": 0.3576394258926372
+    },
+    "nearest_car": {
+      "mean_wait": 369.8764451737386,
+      "p95_wait": 1274.6797453703682,
+      "special_mean_wait": 351.20051362791145,
+      "general_mean_wait": 371.2761411740929,
+      "door_crowding_rate": 0.8570217356510131,
+      "fairness_disparity": 0.9951147807124229,
+      "completion_fraction": 0.7596658396882919,
+      "passenger_weighted_completed_wait": 268.7676673725629,
+      "ratio_of_group_mean_waits": 0.9459280429852132
+    },
+    "occupancy_aware": {
+      "mean_wait": 377.1180917287179,
+      "p95_wait": 1285.8984567901286,
+      "special_mean_wait": 358.4008692951541,
+      "general_mean_wait": 378.48773222794375,
+      "door_crowding_rate": 0.11350006000427197,
+      "fairness_disparity": 1.0024002991068492,
+      "completion_fraction": 0.7483690776788757,
+      "passenger_weighted_completed_wait": 274.4094338610791,
+      "ratio_of_group_mean_waits": 0.9469286287971618
+    },
+    "oracle_upper": {
+      "mean_wait": 322.8642604600294,
+      "p95_wait": 1175.212718621398,
+      "special_mean_wait": 99.94145997282428,
+      "general_mean_wait": 349.09855703571594,
+      "door_crowding_rate": 0.05103035271661119,
+      "fairness_disparity": 2.0939834080830066,
+      "completion_fraction": 0.7998519515891998,
+      "passenger_weighted_completed_wait": 248.5937095262243,
+      "ratio_of_group_mean_waits": 0.286284368579041
+    },
+    "stability_aware": {
+      "mean_wait": 379.7250200769281,
+      "p95_wait": 1300.3713991769519,
+      "special_mean_wait": 363.06473257697144,
+      "general_mean_wait": 380.96158972470147,
+      "door_crowding_rate": 0.11802224866121529,
+      "fairness_disparity": 0.9946687394819277,
+      "completion_fraction": 0.7466314621463791,
+      "passenger_weighted_completed_wait": 277.30765938428453,
+      "ratio_of_group_mean_waits": 0.9530218855904528
+    }
+  }
+}

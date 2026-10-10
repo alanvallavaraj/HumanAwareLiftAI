@@ -1,0 +1,10 @@
+{
+  "note": "Retained source files for the new bounded campaign and analyses; source snapshot hashes. Historical executed-source provenance is separately limited.",
+  "sha256": {
+    "src/simulator.py": "f082fae71dd9e741a52f56f7f22b147b2219cff68087afeea1842fd510ed62f3",
+    "scripts/run_censoring_validation.py": "dae3757ff14c19e74d2c10d976d5ec0c81ba4bf82ebe129ee189df81153876e1",
+    "scripts/reviewer_analysis.py": "a2ce120de3fc5319875141e8e5d64aa8f01be3ad97719c4bc9db273351280773",
+    "scripts/analyse_censoring_validation.py": "b65fd1dd2e1f50279d79c582b8dcc160806b67996c21f7d67b91101c26048add",
+    "scripts/make_figures.py": "2212ca0a6f57d41c82c133369498b765c21704662fcdafaf2c5142bcb23ef965"
+  }
+}

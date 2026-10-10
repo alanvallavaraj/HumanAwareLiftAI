@@ -1,0 +1,100 @@
+{
+  "passed": true,
+  "errors": [],
+  "rows": 279936,
+  "runs": {
+    "layered_access_stability": 34992,
+    "collective": 34992,
+    "access_priority": 34992,
+    "occupancy_aware": 34992,
+    "human_aware": 34992,
+    "nearest_car": 34992,
+    "stability_aware": 34992,
+    "oracle_upper": 34992
+  },
+  "means": {
+    "layered_access_stability": {
+      "mean_wait": 349.8741502756778,
+      "p95_wait": 1276.1833419067482,
+      "failed_pickup_rate": 0.9517912273608731,
+      "door_crowding_rate": 0.11928385786995124,
+      "special_mean_wait": 133.18556890269218,
+      "jerk_exposure": 12.184599831597986,
+      "score": 878.4766912228816
+    },
+    "collective": {
+      "mean_wait": 369.53890041016194,
+      "p95_wait": 1275.5826774691789,
+      "failed_pickup_rate": 0.9370990360709133,
+      "door_crowding_rate": 0.8542233623541124,
+      "special_mean_wait": 353.45547307636684,
+      "jerk_exposure": 14.017514951237231,
+      "score": 905.5750753029827
+    },
+    "access_priority": {
+      "mean_wait": 350.44367552128716,
+      "p95_wait": 1274.2601466049518,
+      "failed_pickup_rate": 0.9193209515621956,
+      "door_crowding_rate": 0.1205290215128776,
+      "special_mean_wait": 129.41332378230032,
+      "jerk_exposure": 14.068164961354983,
+      "score": 877.3783767904731
+    },
+    "occupancy_aware": {
+      "mean_wait": 377.1180917287144,
+      "p95_wait": 1285.8984567901343,
+      "failed_pickup_rate": 0.9732133367736078,
+      "door_crowding_rate": 0.11350006000427464,
+      "special_mean_wait": 358.40086929514945,
+      "jerk_exposure": 13.97426967542967,
+      "score": 905.5438355551538
+    },
+    "human_aware": {
+      "mean_wait": 353.35682653077555,
+      "p95_wait": 1279.7573259602386,
+      "failed_pickup_rate": 0.9174192165470096,
+      "door_crowding_rate": 0.1257087295920942,
+      "special_mean_wait": 130.6639515241566,
+      "jerk_exposure": 12.176451748471766,
+      "score": 881.680887705322
+    },
+    "nearest_car": {
+      "mean_wait": 369.8764451737302,
+      "p95_wait": 1274.6797453703205,
+      "failed_pickup_rate": 0.9401817641373577,
+      "door_crowding_rate": 0.8570217356510086,
+      "special_mean_wait": 351.20051362790656,
+      "jerk_exposure": 14.032051685429936,
+      "score": 905.8488632859144
+    },
+    "stability_aware": {
+      "mean_wait": 379.7250200769191,
+      "p95_wait": 1300.3713991769412,
+      "failed_pickup_rate": 0.9913177943172079,
+      "door_crowding_rate": 0.1180222486612157,
+      "special_mean_wait": 363.06473257696564,
+      "jerk_exposure": 12.113927849043368,
+      "score": 913.5419676843362
+    },
+    "oracle_upper": {
+      "mean_wait": 322.864260460029,
+      "p95_wait": 1175.2127186213927,
+      "failed_pickup_rate": 0.7748948589975163,
+      "door_crowding_rate": 0.051030352716610605,
+      "special_mean_wait": 99.94145997282438,
+      "jerk_exposure": 12.207685654108833,
+      "score": 801.7559101712816
+    }
+  },
+  "completion_fraction": {
+    "layered_access_stability": 0.7445363497725982,
+    "collective": 0.7597150174863814,
+    "access_priority": 0.746117262104286,
+    "occupancy_aware": 0.7483690776788757,
+    "human_aware": 0.7451561910105874,
+    "nearest_car": 0.7596658396882919,
+    "stability_aware": 0.7466314621463791,
+    "oracle_upper": 0.7998519515891998
+  },
+  "note": "Completion fractions are passenger-weighted; waits in archived outputs describe completed trips only."
+}

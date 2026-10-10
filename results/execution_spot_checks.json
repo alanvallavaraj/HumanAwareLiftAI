@@ -1,0 +1,42 @@
+{
+  "layered_access_stability": {
+    "seed": "1",
+    "matching_all_metrics": true,
+    "differences": []
+  },
+  "collective": {
+    "seed": "3",
+    "matching_all_metrics": true,
+    "differences": []
+  },
+  "access_priority": {
+    "seed": "11",
+    "matching_all_metrics": true,
+    "differences": []
+  },
+  "occupancy_aware": {
+    "seed": "2",
+    "matching_all_metrics": true,
+    "differences": []
+  },
+  "human_aware": {
+    "seed": "11",
+    "matching_all_metrics": true,
+    "differences": []
+  },
+  "nearest_car": {
+    "seed": "11",
+    "matching_all_metrics": true,
+    "differences": []
+  },
+  "stability_aware": {
+    "seed": "6",
+    "matching_all_metrics": true,
+    "differences": []
+  },
+  "oracle_upper": {
+    "seed": "8",
+    "matching_all_metrics": true,
+    "differences": []
+  }
+}

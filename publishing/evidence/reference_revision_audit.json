@@ -1,0 +1,9 @@
+{
+  "literature_entries": 32,
+  "current_registry_checks_verified": 24,
+  "registry_rate_limited": 8,
+  "rate_limited_entries": "Previously Crossref-verified records retained; publisher and author records used to check existence. No unresolved candidates added.",
+  "year_corrections": "Print-year used when available; Zhang camera article 2015, Sorsa article 2018.",
+  "capitalisation": "Exact titles protected; all-capital surnames normalised.",
+  "order": "Numeric bibliography ordered by first citation using elsarticle-num; no forced nocite ordering."
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "stage": "results_smoke",
+    "rows": 12,
+    "sha256": "87ff5e614cc78c811420a4fff4c5cb85391c47b4016e145f743aa919e5e081a0",
+    "controllers": [
+      "collective",
+      "human_aware",
+      "occupancy_aware"
+    ]
+  },
+  {
+    "stage": "results_smoke2",
+    "rows": 12,
+    "sha256": "aa02fdec1d02da37d501b95b77ac1724467100f579496ad18f402740c32e81ed",
+    "controllers": [
+      "collective",
+      "human_aware",
+      "occupancy_aware"
+    ]
+  },
+  {
+    "stage": "results_pilot",
+    "rows": 7680,
+    "sha256": "804bf6e541e40d1168088ed27bed62dbe01b85d7518b40501000772454fd3485",
+    "controllers": [
+      "access_priority",
+      "collective",
+      "human_aware",
+      "nearest_car",
+      "occupancy_aware",
+      "stability_aware"
+    ]
+  },
+  {
+    "stage": "results_full_reduced",
+    "rows": 122472,
+    "sha256": "4313a8bcd737bd673d822e5df65b0d121bf4941965e70a33c35ee4da2416aaee",
+    "controllers": [
+      "access_priority",
+      "collective",
+      "human_aware",
+      "nearest_car",
+      "occupancy_aware",
+      "oracle_upper",
+      "stability_aware"
+    ]
+  },
+  {
+    "stage": "results_layered_followup",
+    "rows": 17496,
+    "sha256": "b7a6d4cf5fab19f368497df237639158447907d16a2d09413dcd64984a665bbc",
+    "controllers": [
+      "layered_access_stability"
+    ]
+  }
+]

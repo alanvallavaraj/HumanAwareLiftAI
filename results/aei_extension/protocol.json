@@ -1,0 +1,159 @@
+{
+  "expected_runs": 16848,
+  "scenario_count": 108,
+  "seeds": 12,
+  "configurations": [
+    {
+      "name": "occupancy_reference",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "dispatch_only",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "boarding_only",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": true,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "pickup_exception_only",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": false,
+      "exception": true,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "full_priority",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "priority_weight_1.4",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 1.4,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "priority_weight_4.2",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 4.2,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "collective",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "distance_only_nearest",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": true,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "dwell_occupancy_reference",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    },
+    {
+      "name": "dwell_full_priority",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    },
+    {
+      "name": "dwell_collective",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    },
+    {
+      "name": "dwell_distance_only_nearest",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": true,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    }
+  ],
+  "python": "3.12.1",
+  "source_sha256": {
+    "scripts/run_aei_extension.py": "fd78572cd7a2e8764c0b1ed8f9cb8887b68d9dbb19acaf2373263c84d32e9a48",
+    "src/aei_extension.py": "3498febffd00c902b35ac3cc7b13f3d407750cc6f4e9f70445ba840087232916",
+    "src/simulator.py": "f082fae71dd9e741a52f56f7f22b147b2219cff68087afeea1842fd510ed62f3"
+  },
+  "model_revision": "served targets cleared; common counter-based dispatch jitter; explicit transfer completion times; no synthetic comfort accounting",
+  "stopping_rule": "Fixed grid only. Resume missing cases only. No performance-driven reruns.",
+  "source_note": "Executed source files are identified by the SHA-256 values above. src/aei_extension.py and src/simulator.py in this repository are byte-identical; scripts/run_aei_extension.py was later edited only to remove execution-platform fields from the protocol metadata it writes."
+}

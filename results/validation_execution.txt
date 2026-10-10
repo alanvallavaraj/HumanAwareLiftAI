@@ -1,0 +1,92 @@
+data/full/validation_report.md
+# Extra Validation Report
+
+Dataset: `data/full/results.csv`
+Total simulated building-days: 279,936
+Controllers analysed: 8
+
+## 1. Ablation / Module Contribution
+
+| controller | interpretation | mean_wait | door_crowding_rate | special_mean_wait | jerk_exposure | score |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| oracle_upper | oracle-labelled reference, not a proven bound | 322.864 | 0.0510 | 99.941 | 12.208 | 801.756 |
+| access_priority | accessibility-aware dispatch | 350.444 | 0.1205 | 129.413 | 14.068 | 877.378 |
+| layered_access_stability | accessibility and stability rule configuration | 349.874 | 0.1193 | 133.186 | 12.185 | 878.477 |
+| human_aware | monolithic combined controller | 353.357 | 0.1257 | 130.664 | 12.176 | 881.681 |
+| occupancy_aware | capacity sensing only | 377.118 | 0.1135 | 358.401 | 13.974 | 905.544 |
+| collective | classical baseline | 369.539 | 0.8542 | 353.455 | 14.018 | 905.575 |
+| stability_aware | synthetic stability exposure accounting | 379.725 | 0.1180 | 363.065 | 12.114 | 913.542 |
+
+### Improvements vs collective baseline
+
+| controller | mean_wait | door_crowding | special_wait | jerk_exposure | score |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| occupancy_aware | -2.05% | 86.71% | -1.40% | 0.31% | 0.00% |
+| access_priority | 5.17% | 85.89% | 63.39% | -0.36% | 3.11% |
+| stability_aware | -2.76% | 86.18% | -2.72% | 13.58% | -0.88% |
+| layered_access_stability | 5.32% | 86.04% | 62.32% | 13.08% | 2.99% |
+| human_aware | 4.38% | 85.28% | 63.03% | 13.13% | 2.64% |
+
+Interpretation: accessibility dispatch is the dominant scheduling contribution; stability control is the dominant comfort contribution. The layered controller preserves the accessibility benefit while reducing jerk exposure.
+
+## 2. Sensor-Noise Robustness
+
+| noise | controller | mean_wait | door_crowding_rate | special_mean_wait | jerk_exposure | score |
+| ---: | --- | ---: | ---: | ---: | ---: | ---: |
+| 0.00 | collective | 369.539 | 0.8542 | 353.455 | 13.953 | 905.503 |
+| 0.00 | access_priority | 350.444 | 0.1205 | 129.413 | 14.009 | 877.313 |
+| 0.00 | layered_access_stability | 349.874 | 0.1193 | 133.186 | 12.150 | 878.421 |
+| 0.00 | human_aware | 353.357 | 0.1257 | 130.664 | 12.142 | 881.625 |
+| 0.00 | stability_aware | 379.725 | 0.1180 | 363.065 | 12.076 | 913.484 |
+| 0.08 | collective | 369.539 | 0.8542 | 353.455 | 13.978 | 905.531 |
+| 0.08 | access_priority | 350.444 | 0.1205 | 129.413 | 14.031 | 877.337 |
+| 0.08 | layered_access_stability | 349.874 | 0.1193 | 133.186 | 12.167 | 878.445 |
+| 0.08 | human_aware | 353.357 | 0.1257 | 130.664 | 12.159 | 881.649 |
+| 0.08 | stability_aware | 379.725 | 0.1180 | 363.065 | 12.093 | 913.508 |
+| 0.18 | collective | 369.539 | 0.8542 | 353.455 | 14.121 | 905.691 |
+| 0.18 | access_priority | 350.444 | 0.1205 | 129.413 | 14.164 | 877.486 |
+| 0.18 | layered_access_stability | 349.874 | 0.1193 | 133.186 | 12.236 | 878.564 |
+| 0.18 | human_aware | 353.357 | 0.1257 | 130.664 | 12.229 | 881.769 |
+| 0.18 | stability_aware | 379.725 | 0.1180 | 363.065 | 12.173 | 913.634 |
+
+### Robustness deltas from noise 0.00 to 0.18
+
+| controller | score_change_% | mean_wait_change_% | jerk_change_% |
+| --- | ---: | ---: | ---: |
+| access_priority | 0.02% | 0.00% | 1.11% |
+| layered_access_stability | 0.02% | 0.00% | 0.71% |
+| human_aware | 0.02% | 0.00% | 0.71% |
+| stability_aware | 0.02% | 0.00% | 0.80% |
+
+## 3. Building / Population Scaling
+
+| building_class | controller | mean_wait | door_crowding_rate | special_mean_wait | jerk_exposure | score |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| small | collective | 294.415 | 0.1164 | 296.134 | 5.877 | 566.032 |
+| small | access_priority | 318.824 | 0.0393 | 167.426 | 5.893 | 602.544 |
+| small | layered_access_stability | 310.247 | 0.0407 | 175.004 | 5.182 | 592.751 |
+| small | human_aware | 339.225 | 0.0424 | 181.299 | 5.180 | 641.027 |
+| small | stability_aware | 322.834 | 0.0427 | 309.244 | 5.156 | 609.482 |
+| medium | collective | 391.719 | 0.1857 | 372.271 | 10.010 | 817.676 |
+| medium | access_priority | 384.565 | 0.0716 | 78.087 | 10.033 | 827.596 |
+| medium | layered_access_stability | 382.962 | 0.0684 | 77.181 | 8.842 | 824.770 |
+| medium | human_aware | 388.547 | 0.0784 | 78.911 | 8.849 | 836.049 |
+| medium | stability_aware | 402.778 | 0.0731 | 379.412 | 8.812 | 844.868 |
+| large | collective | 374.666 | 1.2000 | 356.705 | 16.710 | 991.465 |
+| large | access_priority | 344.340 | 0.1504 | 140.112 | 16.776 | 939.778 |
+| large | layered_access_stability | 345.449 | 0.1493 | 144.763 | 14.466 | 944.000 |
+| large | human_aware | 343.982 | 0.1554 | 139.403 | 14.451 | 937.000 |
+| large | stability_aware | 381.523 | 0.1455 | 366.533 | 14.374 | 987.110 |
+
+### Layered controller improvement vs collective by building class
+
+| building_class | mean_wait | door_crowding | special_wait | jerk_exposure | score |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| small | -5.38% | 65.03% | 40.90% | 11.82% | -4.72% |
+| medium | 2.24% | 63.18% | 79.27% | 11.67% | -0.87% |
+| large | 7.80% | 87.56% | 59.42% | 13.43% | 4.79% |
+
+## Interpretation boundaries
+
+These are descriptive reanalyses of existing runs, not independent validation. The stability factor changes comfort accounting but not movement timing. Noise perturbs the synthetic stability signal only. Configurations differ in multiple rules, so comparisons are not clean causal ablations. Completion fractions and matched scenario uncertainty should accompany wait comparisons. See paper/manuscript.pdf and results/reproduction_check.json.
+

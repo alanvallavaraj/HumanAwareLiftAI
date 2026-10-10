@@ -1,0 +1,2532 @@
+[
+  {
+    "DOI": "10.1016/j.aei.2021.101286",
+    "title": [
+      "Smart dispatching and optimal elevator group control through real-time occupancy-aware deep learning of usage patterns"
+    ],
+    "author": [
+      {
+        "given": "Shu",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xuejian",
+        "family": "Gong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mulang",
+        "family": "Song",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Cindy Y.",
+        "family": "Fei",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Stefan",
+        "family": "Quaadgras",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jianyuan",
+        "family": "Peng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Pan",
+        "family": "Zou",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jerred",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Wei",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Roger J.",
+        "family": "Jiao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "48",
+    "page": "101286",
+    "article-number": "101286",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          4
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          4
+        ]
+      ]
+    },
+    "reference-count": 37
+  },
+  {
+    "DOI": "10.1016/j.aei.2021.101477",
+    "title": [
+      "Design of digital twin applications in automated storage yard scheduling"
+    ],
+    "author": [
+      {
+        "given": "Yinping",
+        "family": "Gao",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Daofang",
+        "family": "Chang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Chun-Hsien",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhenyu",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "51",
+    "page": "101477",
+    "article-number": "101477",
+    "published": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2022,
+          1
+        ]
+      ]
+    },
+    "reference-count": 38
+  },
+  {
+    "DOI": "10.1016/j.aei.2024.102497",
+    "title": [
+      "Traffic pattern-aware elevator dispatching via deep reinforcement learning"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-3748-8404",
+        "authenticated-orcid": false,
+        "given": "Jiansong",
+        "family": "Wan",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kanghoon",
+        "family": "Lee",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hayong",
+        "family": "Shin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "61",
+    "page": "102497",
+    "article-number": "102497",
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          8
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          8
+        ]
+      ]
+    },
+    "reference-count": 51
+  },
+  {
+    "DOI": "10.1016/j.aei.2024.102525",
+    "title": [
+      "An information freshness-based digital twin model to support multi-level complementary dynamic scheduling in Shared Manufacturing"
+    ],
+    "author": [
+      {
+        "given": "Huagang",
+        "family": "Tong",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jianjun",
+        "family": "Zhu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bin",
+        "family": "Wu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Zhenzhen",
+        "family": "Ma",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "61",
+    "page": "102525",
+    "article-number": "102525",
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          8
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          8
+        ]
+      ]
+    },
+    "reference-count": 34
+  },
+  {
+    "DOI": "10.1016/j.aei.2024.102794",
+    "title": [
+      "Elevator priority scheduling with deep learning based image analytics for people with special needs"
+    ],
+    "author": [
+      {
+        "given": "Wei",
+        "family": "Han",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6702-9834",
+        "authenticated-orcid": false,
+        "given": "Albert Y.",
+        "family": "Chen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Nai-Wen",
+        "family": "Chi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shang-Hsien",
+        "family": "Hsieh",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "62",
+    "page": "102794",
+    "article-number": "102794",
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          10
+        ]
+      ]
+    },
+    "reference-count": 50
+  },
+  {
+    "DOI": "10.1016/j.aei.2025.103302",
+    "title": [
+      "Adaptive exit choices of pedestrians during emergency evacuation: A study combining virtual experiments, survey and modelling"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-0568-1154",
+        "authenticated-orcid": false,
+        "given": "Zhichao",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Wenke",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tingting",
+        "family": "Nong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Tao",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jingyu",
+        "family": "Tan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Eric Wai Ming",
+        "family": "Lee",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Meng",
+        "family": "Shi",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "65",
+    "page": "103302",
+    "article-number": "103302",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          5
+        ]
+      ]
+    },
+    "reference-count": 71
+  },
+  {
+    "DOI": "10.1016/j.aei.2025.103497",
+    "title": [
+      "A reinforcement learning from human feedback based method for task allocation of human robot collaboration assembly considering human preference"
+    ],
+    "author": [
+      {
+        "given": "Jingfei",
+        "family": "Wang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yan",
+        "family": "Yan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yaoguang",
+        "family": "Hu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xiaonan",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "66",
+    "page": "103497",
+    "article-number": "103497",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          7
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          7
+        ]
+      ]
+    },
+    "reference-count": 47
+  },
+  {
+    "DOI": "10.1016/j.aei.2025.103591",
+    "title": [
+      "Contexts Matter: Robot-Aware 3D human motion prediction for Agentic AI-empowered Human-Robot collaboration"
+    ],
+    "author": [
+      {
+        "given": "Xiaoyun",
+        "family": "Liang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Lin",
+        "family": "Sheng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiannan",
+        "family": "Cai",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "68",
+    "page": "103591",
+    "article-number": "103591",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "reference-count": 68
+  },
+  {
+    "DOI": "10.1016/j.aei.2025.103613",
+    "title": [
+      "Integration of dynamic knowledge and LLM for adaptive human-robot collaborative assembly solution generation"
+    ],
+    "author": [
+      {
+        "given": "Yiwei",
+        "family": "Hua",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Kerun",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-8411-5096",
+        "authenticated-orcid": false,
+        "given": "Ru",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yingjie",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Guoxin",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yan",
+        "family": "Yan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "68",
+    "page": "103613",
+    "article-number": "103613",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2025,
+          11
+        ]
+      ]
+    },
+    "reference-count": 62
+  },
+  {
+    "DOI": "10.1016/j.aei.2025.103961",
+    "title": [
+      "A multi-layer dynamic production scheduling method for manufacturing systems with cloud-edge-end architecture"
+    ],
+    "author": [
+      {
+        "given": "Yongcheng",
+        "family": "Yin",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Bo",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shilong",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4764-3938",
+        "authenticated-orcid": false,
+        "given": "Ling",
+        "family": "Kang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Qing",
+        "family": "Peng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "69",
+    "page": "103961",
+    "article-number": "103961",
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2026,
+          1
+        ]
+      ]
+    },
+    "reference-count": 41
+  },
+  {
+    "DOI": "10.1109/MCS.2015.2427045",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1109/21.384263",
+    "title": [
+      "A fuzzy approach to elevator group control system"
+    ],
+    "author": [
+      {
+        "family": "Chang Bum Kim",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "K.A.",
+        "family": "Seong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "family": "Hyung Lee-Kwang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "J.O.",
+        "family": "Kim",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "family": "Yong Bae Lim",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Systems, Man, and Cybernetics"
+    ],
+    "volume": "25",
+    "page": "985-990",
+    "published": {
+      "date-parts": [
+        [
+          1995,
+          6
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1995,
+          6
+        ]
+      ]
+    },
+    "reference-count": 22
+  },
+  {
+    "DOI": "10.1016/j.conengprac.2006.06.005",
+    "title": [
+      "Prioritised A* search in real-time elevator dispatching"
+    ],
+    "author": [
+      {
+        "given": "Muna",
+        "family": "Hamdi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "D.J.",
+        "family": "Mulvaney",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Control Engineering Practice"
+    ],
+    "volume": "15",
+    "page": "219-230",
+    "published": {
+      "date-parts": [
+        [
+          2007,
+          2
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2007,
+          2
+        ]
+      ]
+    },
+    "reference-count": 23
+  },
+  {
+    "DOI": "10.1016/j.asoc.2010.05.023",
+    "title": [
+      "Genetic and tabu search approaches for optimizing the hall call\u2014Car allocation problem in elevator group systems"
+    ],
+    "author": [
+      {
+        "given": "Berna",
+        "family": "Bolat",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Pablo",
+        "family": "Cort\u00e9s",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Applied Soft Computing"
+    ],
+    "volume": "11",
+    "page": "1792-1800",
+    "published": {
+      "date-parts": [
+        [
+          2011,
+          3
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2011,
+          3
+        ]
+      ]
+    },
+    "reference-count": 18
+  },
+  {
+    "DOI": "10.3390/en13236161",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1016/j.enbuild.2007.01.018",
+    "title": [
+      "A generalised stochastic model for the simulation of occupant presence"
+    ],
+    "author": [
+      {
+        "given": "J.",
+        "family": "Page",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "D.",
+        "family": "Robinson",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "N.",
+        "family": "Morel",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.-L.",
+        "family": "Scartezzini",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Energy and Buildings"
+    ],
+    "volume": "40",
+    "page": "83-98",
+    "published": {
+      "date-parts": [
+        [
+          2008,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2008,
+          1
+        ]
+      ]
+    },
+    "reference-count": 18
+  },
+  {
+    "DOI": "10.1016/j.asoc.2003.11.002",
+    "title": [
+      "Genetic algorithm for controllers in elevator groups: analysis and simulation during lunchpeak traffic"
+    ],
+    "author": [
+      {
+        "given": "P.",
+        "family": "Cort\u00e9s",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "J.",
+        "family": "Larra\u00f1eta",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "L.",
+        "family": "Onieva",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Applied Soft Computing"
+    ],
+    "volume": "4",
+    "page": "159-174",
+    "published": {
+      "date-parts": [
+        [
+          2004,
+          5
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2004,
+          5
+        ]
+      ]
+    },
+    "reference-count": 22
+  },
+  {
+    "DOI": "10.1016/j.asoc.2012.11.023",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1109/3468.668960",
+    "title": [
+      "Design and implementation of a fuzzy elevator group control system"
+    ],
+    "author": [
+      {
+        "family": "ChangBum Kim",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "K.A.",
+        "family": "Seong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "family": "Hyung Lee-Kwang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.O.",
+        "family": "Kim",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans"
+    ],
+    "volume": "28",
+    "page": "277-287",
+    "published": {
+      "date-parts": [
+        [
+          1998,
+          5
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1998,
+          5
+        ]
+      ]
+    },
+    "reference-count": 20
+  },
+  {
+    "DOI": "10.1016/j.procs.2019.09.200",
+    "title": [
+      "Fair and Effective Elevator Car Dispatching Method in Elevator Group Control System using Cameras"
+    ],
+    "author": [
+      {
+        "given": "Tomoki",
+        "family": "Yamauchi",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Rina",
+        "family": "Ide",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Toshiharu",
+        "family": "Sugawara",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Procedia Computer Science"
+    ],
+    "volume": "159",
+    "page": "455-464",
+    "published": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "reference-count": 11
+  },
+  {
+    "DOI": "10.1016/j.apenergy.2019.113336",
+    "title": [
+      "Robust non-intrusive interpretation of occupant thermal comfort in built environments with low-cost networked thermal cameras"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-0539-1939",
+        "authenticated-orcid": false,
+        "given": "Da",
+        "family": "Li",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Carol C.",
+        "family": "Menassa",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Vineet R.",
+        "family": "Kamat",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Applied Energy"
+    ],
+    "volume": "251",
+    "page": "113336",
+    "article-number": "113336",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          10
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          10
+        ]
+      ]
+    },
+    "reference-count": 48
+  },
+  {
+    "DOI": "10.1016/j.enbuild.2014.03.069",
+    "title": [
+      "A robust occupancy detection and tracking algorithm for the automatic monitoring and commissioning of a building"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0001-9241-6633",
+        "authenticated-orcid": false,
+        "given": "Huang-Chia",
+        "family": "Shih",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Energy and Buildings"
+    ],
+    "volume": "77",
+    "page": "270-280",
+    "published": {
+      "date-parts": [
+        [
+          2014,
+          7
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2014,
+          7
+        ]
+      ]
+    },
+    "reference-count": 34
+  },
+  {
+    "DOI": "10.1007/s11042-013-1716-1",
+    "title": [
+      "A novel elevator group control algorithm based on binocular-cameras corridor passenger detection and tracking"
+    ],
+    "author": [
+      {
+        "given": "Zutao",
+        "family": "Zhang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yipeng",
+        "family": "Zheng",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Hong",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Hengjian",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Multimedia Tools and Applications"
+    ],
+    "volume": "74",
+    "page": "1761-1775",
+    "published": {
+      "date-parts": [
+        [
+          2013,
+          10,
+          3
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2015,
+          3
+        ]
+      ]
+    },
+    "reference-count": 28
+  },
+  {
+    "DOI": "10.1109/41.915416",
+    "title": [
+      "Adaptive elevator group control with cameras"
+    ],
+    "author": [
+      {
+        "family": "Jung-Hwan Kim",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "family": "Byung-Ro Moon",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Industrial Electronics"
+    ],
+    "volume": "48",
+    "page": "377-382",
+    "published": {
+      "date-parts": [
+        [
+          2001,
+          4
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2001,
+          4
+        ]
+      ]
+    },
+    "reference-count": 22
+  },
+  {
+    "DOI": "10.1016/s0377-2217(02)00203-5",
+    "title": [
+      "Hospital lift system simulator: A performance evaluator\u2013predictor"
+    ],
+    "author": [
+      {
+        "given": "Sydney C.K.",
+        "family": "Chu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "C.K.Y.",
+        "family": "Lin",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "S.S.",
+        "family": "Lam",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "European Journal of Operational Research"
+    ],
+    "volume": "146",
+    "page": "156-180",
+    "published": {
+      "date-parts": [
+        [
+          2003,
+          4
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2003,
+          4
+        ]
+      ]
+    },
+    "reference-count": 22
+  },
+  {
+    "DOI": "10.1061/(asce)cp.1943-5487.0000707",
+    "title": [
+      "Agent-Based Lift System Simulation Model for High-Rise Building Construction Projects"
+    ],
+    "author": [
+      {
+        "given": "Minhyuk",
+        "family": "Jung",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Postdoctoral Research Fellow, Dept. of Civil and Environment Engineering, Seoul National Univ., 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea."
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Moonseo",
+        "family": "Park",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Professor, Dept. of Architecture and Architectural Engineering, Seoul National Univ., 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Republic of Korea."
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Hyun-Soo",
+        "family": "Lee",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Professor, Dept. of Architecture and Architectural Engineering, Seoul National Univ., 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Republic of Korea."
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Seokho",
+        "family": "Chi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Associate Professor, Dept. of Civil and Environment Engineering, Seoul National Univ., 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea; Adjunct Professor, Institute of Construction and Environmental Engineering, Seoul National Univ., 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Korea (corresponding author)."
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Computing in Civil Engineering"
+    ],
+    "volume": "31",
+    "article-number": "04017064",
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2017,
+          11
+        ]
+      ]
+    },
+    "reference-count": 14
+  },
+  {
+    "DOI": "10.1016/j.ejor.2016.01.019",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1016/j.cie.2021.107190",
+    "title": [
+      "Double deck elevator group control systems using evolutionary algorithms: Interfloor and lunchpeak traffic analysis"
+    ],
+    "author": [
+      {
+        "given": "Pablo",
+        "family": "Cort\u00e9s",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jes\u00fas",
+        "family": "Mu\u00f1uzuri",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alejandro",
+        "family": "V\u00e1zquez-Ledesma",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Luis",
+        "family": "Onieva",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Computers &amp; Industrial Engineering"
+    ],
+    "volume": "155",
+    "page": "107190",
+    "article-number": "107190",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          5
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          5
+        ]
+      ]
+    },
+    "reference-count": 56
+  },
+  {
+    "DOI": "10.1016/j.ifacol.2016.07.071",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1109/tie.2013.2289867",
+    "title": [
+      "Dynamic Fuzzy Logic Elevator Group Control System With Relative Waiting Time Consideration"
+    ],
+    "author": [
+      {
+        "given": "J.",
+        "family": "Fernandez",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "P.",
+        "family": "Cortes",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.",
+        "family": "Munuzuri",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "J.",
+        "family": "Guadix",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Industrial Electronics"
+    ],
+    "volume": "61",
+    "page": "4912-4919",
+    "published": {
+      "date-parts": [
+        [
+          2014,
+          9
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2014,
+          9
+        ]
+      ]
+    },
+    "reference-count": 26
+  },
+  {
+    "DOI": "10.1109/TNNLS.2020.2965208",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1023/a:1007518724497",
+    "title": [
+      "Elevator Group Control Using Multiple Reinforcement Learning Agents"
+    ],
+    "author": [
+      {
+        "given": "Robert H.",
+        "family": "Crites",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Andrew G.",
+        "family": "Barto",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Machine Learning"
+    ],
+    "volume": "33",
+    "page": "235-262",
+    "published": {
+      "date-parts": [
+        [
+          1998,
+          11
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          1998,
+          11
+        ]
+      ]
+    },
+    "reference-count": 43
+  },
+  {
+    "DOI": "10.1007/s11590-017-1130-0",
+    "title": [
+      "Modeling uncertain passenger arrivals in the elevator dispatching problem with destination control"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-8249-1960",
+        "authenticated-orcid": false,
+        "given": "Janne",
+        "family": "Sorsa",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Harri",
+        "family": "Ehtamo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Juha-Matti",
+        "family": "Kuusinen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mirko",
+        "family": "Ruokokoski",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Marja-Liisa",
+        "family": "Siikonen",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Optimization Letters"
+    ],
+    "volume": "12",
+    "page": "171-185",
+    "published": {
+      "date-parts": [
+        [
+          2017,
+          3,
+          23
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2018,
+          1
+        ]
+      ]
+    },
+    "reference-count": 36
+  },
+  {
+    "DOI": "10.1177/0143624420983974",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1109/tsmca.2011.2157134",
+    "title": [
+      "Real-Time Combinatorial Optimization for Elevator Group Dispatching"
+    ],
+    "author": [
+      {
+        "given": "Paul E.",
+        "family": "Utgoff",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Margaret E.",
+        "family": "Connell",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans"
+    ],
+    "volume": "42",
+    "page": "130-146",
+    "published": {
+      "date-parts": [
+        [
+          2012,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2012,
+          1
+        ]
+      ]
+    },
+    "reference-count": 26
+  },
+  {
+    "DOI": "10.1093/ietfec/e91-a.11.3207",
+    "title": [
+      "MceSim: A Multi-Car Elevator Simulator"
+    ],
+    "author": [
+      {
+        "given": "T.",
+        "family": "MIYAMOTO",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "S.",
+        "family": "YAMAGUCHI",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEICE Transactions on Fundamentals of Electronics, Communications and Computer Sciences"
+    ],
+    "volume": "E91-A",
+    "page": "3207-3214",
+    "published": {
+      "date-parts": [
+        [
+          2008,
+          11,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2008,
+          11,
+          1
+        ]
+      ]
+    },
+    "reference-count": 0
+  },
+  {
+    "DOI": "10.1016/j.aei.2020.101225",
+    "title": [
+      "Digital Twin as a Service (DTaaS) in Industry 4.0: An Architecture Reference Model"
+    ],
+    "author": [
+      {
+        "given": "Shohin",
+        "family": "Aheleroff",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Xun",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Ray Y.",
+        "family": "Zhong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yuqian",
+        "family": "Lu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Advanced Engineering Informatics"
+    ],
+    "volume": "47",
+    "page": "101225",
+    "article-number": "101225",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "reference-count": 62
+  },
+  {
+    "DOI": "10.1016/j.jmsy.2020.06.017",
+    "title": [
+      "Review of digital twin about concepts, technologies, and industrial applications"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-4437-3434",
+        "authenticated-orcid": false,
+        "given": "Mengnan",
+        "family": "Liu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Shuiliang",
+        "family": "Fang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Huiyue",
+        "family": "Dong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Cunzhi",
+        "family": "Xu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Manufacturing Systems"
+    ],
+    "volume": "58",
+    "page": "346-361",
+    "published": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2021,
+          1
+        ]
+      ]
+    },
+    "reference-count": 130
+  },
+  {
+    "DOI": "10.1016/j.mechatronics.2018.02.009",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "DOI": "10.1016/j.jmsy.2022.12.011",
+    "title": [
+      "An ergonomic role allocation framework for dynamic human\u2013robot collaborative tasks"
+    ],
+    "author": [
+      {
+        "given": "Elena",
+        "family": "Merlo",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-5526-2337",
+        "authenticated-orcid": false,
+        "given": "Edoardo",
+        "family": "Lamon",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-3909-7941",
+        "authenticated-orcid": false,
+        "given": "Fabio",
+        "family": "Fusaro",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-9458-6844",
+        "authenticated-orcid": false,
+        "given": "Marta",
+        "family": "Lorenzini",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9208-6910",
+        "authenticated-orcid": false,
+        "given": "Alessandro",
+        "family": "Carf\u00ec",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Fulvio",
+        "family": "Mastrogiovanni",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Arash",
+        "family": "Ajoudani",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Manufacturing Systems"
+    ],
+    "volume": "67",
+    "page": "111-121",
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          4
+        ]
+      ]
+    },
+    "published-print": {
+      "date-parts": [
+        [
+          2023,
+          4
+        ]
+      ]
+    },
+    "reference-count": 44
+  }
+]

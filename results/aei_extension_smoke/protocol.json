@@ -1,0 +1,159 @@
+{
+  "expected_runs": 26,
+  "scenario_count": 2,
+  "seeds": 1,
+  "configurations": [
+    {
+      "name": "occupancy_reference",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "dispatch_only",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "boarding_only",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": true,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "pickup_exception_only",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": false,
+      "exception": true,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "full_priority",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "priority_weight_1.4",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 1.4,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "priority_weight_4.2",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 4.2,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "collective",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "distance_only_nearest",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": true,
+      "fixed_dwell": 0,
+      "transfer_dwell": 0
+    },
+    {
+      "name": "dwell_occupancy_reference",
+      "occupancy": true,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    },
+    {
+      "name": "dwell_full_priority",
+      "occupancy": true,
+      "dispatch": true,
+      "boarding": true,
+      "exception": true,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    },
+    {
+      "name": "dwell_collective",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": false,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    },
+    {
+      "name": "dwell_distance_only_nearest",
+      "occupancy": false,
+      "dispatch": false,
+      "boarding": false,
+      "exception": false,
+      "bonus": 2.8,
+      "nearest": true,
+      "fixed_dwell": 5,
+      "transfer_dwell": 1
+    }
+  ],
+  "execution_environment": "Local development smoke",
+  "python": "3.12.14",
+  "source_sha256": {
+    "scripts/run_aei_extension.py": "d4c34bb566a63ff5d28384892d82a2f9ad8ec0006cfc145729f2d117c257fc1e",
+    "src/aei_extension.py": "3498febffd00c902b35ac3cc7b13f3d407750cc6f4e9f70445ba840087232916",
+    "src/simulator.py": "f082fae71dd9e741a52f56f7f22b147b2219cff68087afeea1842fd510ed62f3"
+  },
+  "model_revision": "served targets cleared; common counter-based dispatch jitter; explicit transfer completion times; no synthetic comfort accounting",
+  "stopping_rule": "Fixed grid only. Resume missing cases only. No performance-driven reruns."
+}

@@ -1,0 +1,243 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{ref1}
+S.~Wang, X.~Gong, M.~Song, C.~Y. Fei, S.~Quaadgras, J.~Peng, P.~Zou, J.~Chen,
+  W.~Zhang, R.~J. Jiao, {Smart dispatching and optimal elevator group control
+  through real-time occupancy-aware deep learning of usage patterns}, Advanced
+  Engineering Informatics 48 (2021) 101286.
+\newblock \href {https://doi.org/10.1016/j.aei.2021.101286}
+  {\path{doi:10.1016/j.aei.2021.101286}}.
+
+\bibitem{ref3}
+J.~Wan, K.~Lee, H.~Shin, {Traffic pattern-aware elevator dispatching via deep
+  reinforcement learning}, Advanced Engineering Informatics 61 (2024) 102497.
+\newblock \href {https://doi.org/10.1016/j.aei.2024.102497}
+  {\path{doi:10.1016/j.aei.2024.102497}}.
+
+\bibitem{ref5}
+W.~Han, A.~Y. Chen, N.-W. Chi, S.-H. Hsieh, {Elevator priority scheduling with
+  deep learning based image analytics for people with special needs}, Advanced
+  Engineering Informatics 62 (2024) 102794.
+\newblock \href {https://doi.org/10.1016/j.aei.2024.102794}
+  {\path{doi:10.1016/j.aei.2024.102794}}.
+
+\bibitem{ref11}
+C.~B. Kim, K.~Seong, H.~Lee-Kwang, J.~Kim, Y.~B. Lim, {A fuzzy approach to
+  elevator group control system}, IEEE Transactions on Systems, Man, and
+  Cybernetics 25 (1995) 985--990.
+\newblock \href {https://doi.org/10.1109/21.384263}
+  {\path{doi:10.1109/21.384263}}.
+
+\bibitem{ref16}
+C.~Kim, K.~Seong, H.~Lee-Kwang, J.~Kim, {Design and implementation of a fuzzy
+  elevator group control system}, IEEE Transactions on Systems, Man, and
+  Cybernetics - Part A: Systems and Humans 28 (1998) 277--287.
+\newblock \href {https://doi.org/10.1109/3468.668960}
+  {\path{doi:10.1109/3468.668960}}.
+
+\bibitem{ref25}
+J.~Fernandez, P.~Cortes, J.~Munuzuri, J.~Guadix, {Dynamic Fuzzy Logic Elevator
+  Group Control System With Relative Waiting Time Consideration}, IEEE
+  Transactions on Industrial Electronics 61 (2014) 4912--4919.
+\newblock \href {https://doi.org/10.1109/tie.2013.2289867}
+  {\path{doi:10.1109/tie.2013.2289867}}.
+
+\bibitem{ref12}
+M.~Hamdi, D.~Mulvaney, {Prioritised A* search in real-time elevator
+  dispatching}, Control Engineering Practice 15 (2007) 219--230.
+\newblock \href {https://doi.org/10.1016/j.conengprac.2006.06.005}
+  {\path{doi:10.1016/j.conengprac.2006.06.005}}.
+
+\bibitem{ref13}
+B.~Bolat, P.~Cortés, {Genetic and tabu search approaches for optimizing the
+  hall call—Car allocation problem in elevator group systems}, Applied Soft
+  Computing 11 (2011) 1792--1800.
+\newblock \href {https://doi.org/10.1016/j.asoc.2010.05.023}
+  {\path{doi:10.1016/j.asoc.2010.05.023}}.
+
+\bibitem{ref15}
+P.~Cortés, J.~Larrañeta, L.~Onieva, {Genetic algorithm for controllers in
+  elevator groups: analysis and simulation during lunchpeak traffic}, Applied
+  Soft Computing 4 (2004) 159--174.
+\newblock \href {https://doi.org/10.1016/j.asoc.2003.11.002}
+  {\path{doi:10.1016/j.asoc.2003.11.002}}.
+
+\bibitem{ref26}
+R.~H. Crites, A.~G. Barto, {Elevator Group Control Using Multiple Reinforcement
+  Learning Agents}, Machine Learning 33 (1998) 235--262.
+\newblock \href {https://doi.org/10.1023/a:1007518724497}
+  {\path{doi:10.1023/a:1007518724497}}.
+
+\bibitem{ref28}
+P.~E. Utgoff, M.~E. Connell, {Real-Time Combinatorial Optimization for Elevator
+  Group Dispatching}, IEEE Transactions on Systems, Man, and Cybernetics - Part
+  A: Systems and Humans 42 (2012) 130--146.
+\newblock \href {https://doi.org/10.1109/tsmca.2011.2157134}
+  {\path{doi:10.1109/tsmca.2011.2157134}}.
+
+\bibitem{ref24}
+P.~Cortés, J.~Muñuzuri, A.~Vázquez-Ledesma, L.~Onieva, {Double deck elevator
+  group control systems using evolutionary algorithms: Interfloor and lunchpeak
+  traffic analysis}, Computers \& Industrial Engineering 155 (2021) 107190.
+\newblock \href {https://doi.org/10.1016/j.cie.2021.107190}
+  {\path{doi:10.1016/j.cie.2021.107190}}.
+
+\bibitem{ref17}
+T.~Yamauchi, R.~Ide, T.~Sugawara, {Fair and Effective Elevator Car Dispatching
+  Method in Elevator Group Control System using Cameras}, Procedia Computer
+  Science 159 (2019) 455--464.
+\newblock \href {https://doi.org/10.1016/j.procs.2019.09.200}
+  {\path{doi:10.1016/j.procs.2019.09.200}}.
+
+\bibitem{ref20}
+Z.~Zhang, Y.~Zheng, H.~Xu, H.~Li, {A novel elevator group control algorithm
+  based on binocular-cameras corridor passenger detection and tracking},
+  Multimedia Tools and Applications 74 (2015) 1761--1775.
+\newblock \href {https://doi.org/10.1007/s11042-013-1716-1}
+  {\path{doi:10.1007/s11042-013-1716-1}}.
+
+\bibitem{ref21}
+J.-H. Kim, B.-R. Moon, {Adaptive elevator group control with cameras}, IEEE
+  Transactions on Industrial Electronics 48 (2001) 377--382.
+\newblock \href {https://doi.org/10.1109/41.915416}
+  {\path{doi:10.1109/41.915416}}.
+
+\bibitem{ref19}
+H.-C. Shih, {A robust occupancy detection and tracking algorithm for the
+  automatic monitoring and commissioning of a building}, Energy and Buildings
+  77 (2014) 270--280.
+\newblock \href {https://doi.org/10.1016/j.enbuild.2014.03.069}
+  {\path{doi:10.1016/j.enbuild.2014.03.069}}.
+
+\bibitem{ref18}
+D.~Li, C.~C. Menassa, V.~R. Kamat, {Robust non-intrusive interpretation of
+  occupant thermal comfort in built environments with low-cost networked
+  thermal cameras}, Applied Energy 251 (2019) 113336.
+\newblock \href {https://doi.org/10.1016/j.apenergy.2019.113336}
+  {\path{doi:10.1016/j.apenergy.2019.113336}}.
+
+\bibitem{ref14}
+J.~Page, D.~Robinson, N.~Morel, J.-L. Scartezzini, {A generalised stochastic
+  model for the simulation of occupant presence}, Energy and Buildings 40
+  (2008) 83--98.
+\newblock \href {https://doi.org/10.1016/j.enbuild.2007.01.018}
+  {\path{doi:10.1016/j.enbuild.2007.01.018}}.
+
+\bibitem{ref27}
+J.~Sorsa, H.~Ehtamo, J.-M. Kuusinen, M.~Ruokokoski, M.-L. Siikonen, {Modeling
+  uncertain passenger arrivals in the elevator dispatching problem with
+  destination control}, Optimization Letters 12 (2018) 171--185.
+\newblock \href {https://doi.org/10.1007/s11590-017-1130-0}
+  {\path{doi:10.1007/s11590-017-1130-0}}.
+
+\bibitem{ref22}
+S.~C. Chu, C.~Lin, S.~Lam, {Hospital lift system simulator: A performance
+  evaluator–predictor}, European Journal of Operational Research 146 (2003)
+  156--180.
+\newblock \href {https://doi.org/10.1016/s0377-2217(02)00203-5}
+  {\path{doi:10.1016/s0377-2217(02)00203-5}}.
+
+\bibitem{ref23}
+M.~Jung, M.~Park, H.-S. Lee, S.~Chi, {Agent-Based Lift System Simulation Model
+  for High-Rise Building Construction Projects}, Journal of Computing in Civil
+  Engineering 31 (2017) 04017064.
+\newblock \href {https://doi.org/10.1061/(asce)cp.1943-5487.0000707}
+  {\path{doi:10.1061/(asce)cp.1943-5487.0000707}}.
+
+\bibitem{ref29}
+T.~Miyamoto, S.~Yamaguchi, {MceSim: A Multi-Car Elevator Simulator}, IEICE
+  Transactions on Fundamentals of Electronics, Communications and Computer
+  Sciences E91-A (2008) 3207--3214.
+\newblock \href {https://doi.org/10.1093/ietfec/e91-a.11.3207}
+  {\path{doi:10.1093/ietfec/e91-a.11.3207}}.
+
+\bibitem{ref30}
+S.~Aheleroff, X.~Xu, R.~Y. Zhong, Y.~Lu, {Digital Twin as a Service (DTaaS) in
+  Industry 4.0: An Architecture Reference Model}, Advanced Engineering
+  Informatics 47 (2021) 101225.
+\newblock \href {https://doi.org/10.1016/j.aei.2020.101225}
+  {\path{doi:10.1016/j.aei.2020.101225}}.
+
+\bibitem{ref31}
+M.~Liu, S.~Fang, H.~Dong, C.~Xu, {Review of digital twin about concepts,
+  technologies, and industrial applications}, Journal of Manufacturing Systems
+  58 (2021) 346--361.
+\newblock \href {https://doi.org/10.1016/j.jmsy.2020.06.017}
+  {\path{doi:10.1016/j.jmsy.2020.06.017}}.
+
+\bibitem{ref2}
+Y.~Gao, D.~Chang, C.-H. Chen, Z.~Xu, {Design of digital twin applications in
+  automated storage yard scheduling}, Advanced Engineering Informatics 51
+  (2022) 101477.
+\newblock \href {https://doi.org/10.1016/j.aei.2021.101477}
+  {\path{doi:10.1016/j.aei.2021.101477}}.
+
+\bibitem{ref4}
+H.~Tong, J.~Zhu, B.~Wu, Z.~Ma, {An information freshness-based digital twin
+  model to support multi-level complementary dynamic scheduling in Shared
+  Manufacturing}, Advanced Engineering Informatics 61 (2024) 102525.
+\newblock \href {https://doi.org/10.1016/j.aei.2024.102525}
+  {\path{doi:10.1016/j.aei.2024.102525}}.
+
+\bibitem{ref10}
+Y.~Yin, B.~Yang, S.~Wang, L.~Kang, Q.~Peng, {A multi-layer dynamic production
+  scheduling method for manufacturing systems with cloud-edge-end
+  architecture}, Advanced Engineering Informatics 69 (2026) 103961.
+\newblock \href {https://doi.org/10.1016/j.aei.2025.103961}
+  {\path{doi:10.1016/j.aei.2025.103961}}.
+
+\bibitem{ref7}
+J.~Wang, Y.~Yan, Y.~Hu, X.~Yang, {A reinforcement learning from human feedback
+  based method for task allocation of human robot collaboration assembly
+  considering human preference}, Advanced Engineering Informatics 66 (2025)
+  103497.
+\newblock \href {https://doi.org/10.1016/j.aei.2025.103497}
+  {\path{doi:10.1016/j.aei.2025.103497}}.
+
+\bibitem{ref8}
+X.~Liang, L.~Sheng, J.~Cai, {Contexts Matter: Robot-Aware 3D human motion
+  prediction for Agentic AI-empowered Human-Robot collaboration}, Advanced
+  Engineering Informatics 68 (2025) 103591.
+\newblock \href {https://doi.org/10.1016/j.aei.2025.103591}
+  {\path{doi:10.1016/j.aei.2025.103591}}.
+
+\bibitem{ref9}
+Y.~Hua, K.~Li, R.~Wang, Y.~Li, G.~Wang, Y.~Yan, {Integration of dynamic
+  knowledge and LLM for adaptive human-robot collaborative assembly solution
+  generation}, Advanced Engineering Informatics 68 (2025) 103613.
+\newblock \href {https://doi.org/10.1016/j.aei.2025.103613}
+  {\path{doi:10.1016/j.aei.2025.103613}}.
+
+\bibitem{ref32}
+E.~Merlo, E.~Lamon, F.~Fusaro, M.~Lorenzini, A.~Carfì, F.~Mastrogiovanni,
+  A.~Ajoudani, {An ergonomic role allocation framework for dynamic
+  human–robot collaborative tasks}, Journal of Manufacturing Systems 67
+  (2023) 111--121.
+\newblock \href {https://doi.org/10.1016/j.jmsy.2022.12.011}
+  {\path{doi:10.1016/j.jmsy.2022.12.011}}.
+
+\bibitem{ref6}
+Z.~Zhang, W.~Zhang, T.~Nong, T.~Wang, J.~Tan, E.~W.~M. Lee, M.~Shi, {Adaptive
+  exit choices of pedestrians during emergency evacuation: A study combining
+  virtual experiments, survey and modelling}, Advanced Engineering Informatics
+  65 (2025) 103302.
+\newblock \href {https://doi.org/10.1016/j.aei.2025.103302}
+  {\path{doi:10.1016/j.aei.2025.103302}}.
+
+\bibitem{refRMST}
+P.~Royston, M.~K.~B. Parmar, {Restricted mean survival time: an alternative to
+  the hazard ratio for the design and analysis of randomized trials with a
+  time-to-event outcome}, BMC Medical Research Methodology 13 (2013) 152.
+\newblock \href {https://doi.org/10.1186/1471-2288-13-152}
+  {\path{doi:10.1186/1471-2288-13-152}}.
+
+\bibitem{dataset}
+A.~I.~B. Vallavaraj, {[dataset] HumanAwareLiftAI: synthetic lift-dispatch
+  experiments and passenger-event records}, Zenodo, v1.0.0 (2026).
+
+\end{thebibliography}

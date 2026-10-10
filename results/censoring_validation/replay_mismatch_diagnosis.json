@@ -1,0 +1,246 @@
+{
+  "replayed_cases": 3888,
+  "mismatched_cases": 783,
+  "matches_recorded_list": true,
+  "generated_count_changed": 0,
+  "completed_count_changed": 504,
+  "metrics_differing": {
+    "mean_wait": 783,
+    "general_mean_wait": 783,
+    "unnecessary_stop_rate": 780,
+    "mean_journey": 779,
+    "special_mean_wait": 766,
+    "p95_wait": 755,
+    "completed": 504,
+    "failed_pickup_rate": 318,
+    "door_crowding_rate": 221
+  },
+  "magnitude": {
+    "mean_wait": {
+      "n": 783,
+      "median_abs_difference": 8.94792116831266,
+      "max_abs_difference": 307.89
+    },
+    "p95_wait": {
+      "n": 755,
+      "median_abs_difference": 43.95000000000118,
+      "max_abs_difference": 2060.3
+    },
+    "special_mean_wait": {
+      "n": 766,
+      "median_abs_difference": 5.0930232558139545,
+      "max_abs_difference": 350.43055555555554
+    },
+    "general_mean_wait": {
+      "n": 783,
+      "median_abs_difference": 9.457017543859592,
+      "max_abs_difference": 323.781746031746
+    },
+    "mean_journey": {
+      "n": 779,
+      "median_abs_difference": 0.03634893310627607,
+      "max_abs_difference": 0.7041198501872667
+    },
+    "unnecessary_stop_rate": {
+      "n": 780,
+      "median_abs_difference": 0.006019672989262009,
+      "max_abs_difference": 0.03843005667682342
+    },
+    "completed": {
+      "n": 504,
+      "median_abs_difference": 16.0,
+      "max_abs_difference": 223.0
+    },
+    "failed_pickup_rate": {
+      "n": 318,
+      "median_abs_difference": 0.0039768618944323935,
+      "max_abs_difference": 2.7255048616305158
+    },
+    "door_crowding_rate": {
+      "n": 221,
+      "median_abs_difference": 0.0032537960954446853,
+      "max_abs_difference": 2.545387725101066
+    }
+  },
+  "controllers_mismatched_per_scenario_seed": {
+    "1": 147,
+    "2": 60,
+    "3": 172
+  },
+  "mean_signed_mean_wait_difference_by_controller": {
+    "collective": 0.1583869658935177,
+    "occupancy_aware": 1.229894917340719,
+    "access_priority": 0.5472192244724233
+  },
+  "by_factor": {
+    "controller": {
+      "access_priority": {
+        "cases": 1296,
+        "mismatches": 255,
+        "rate": 0.19675925925925927
+      },
+      "collective": {
+        "cases": 1296,
+        "mismatches": 285,
+        "rate": 0.2199074074074074
+      },
+      "occupancy_aware": {
+        "cases": 1296,
+        "mismatches": 243,
+        "rate": 0.1875
+      }
+    },
+    "floors": {
+      "16": {
+        "cases": 1296,
+        "mismatches": 129,
+        "rate": 0.09953703703703703
+      },
+      "32": {
+        "cases": 1296,
+        "mismatches": 12,
+        "rate": 0.009259259259259259
+      },
+      "8": {
+        "cases": 1296,
+        "mismatches": 642,
+        "rate": 0.49537037037037035
+      }
+    },
+    "lifts": {
+      "2": {
+        "cases": 1296,
+        "mismatches": 642,
+        "rate": 0.49537037037037035
+      },
+      "4": {
+        "cases": 1296,
+        "mismatches": 129,
+        "rate": 0.09953703703703703
+      },
+      "8": {
+        "cases": 1296,
+        "mismatches": 12,
+        "rate": 0.009259259259259259
+      }
+    },
+    "population": {
+      "200": {
+        "cases": 1296,
+        "mismatches": 109,
+        "rate": 0.08410493827160494
+      },
+      "2000": {
+        "cases": 1296,
+        "mismatches": 415,
+        "rate": 0.32021604938271603
+      },
+      "800": {
+        "cases": 1296,
+        "mismatches": 259,
+        "rate": 0.19984567901234568
+      }
+    },
+    "traffic": {
+      "down_peak": {
+        "cases": 972,
+        "mismatches": 86,
+        "rate": 0.08847736625514403
+      },
+      "lunch": {
+        "cases": 972,
+        "mismatches": 304,
+        "rate": 0.31275720164609055
+      },
+      "mixed": {
+        "cases": 972,
+        "mismatches": 301,
+        "rate": 0.3096707818930041
+      },
+      "up_peak": {
+        "cases": 972,
+        "mismatches": 92,
+        "rate": 0.09465020576131687
+      }
+    },
+    "special_share": {
+      "0.02": {
+        "cases": 1296,
+        "mismatches": 260,
+        "rate": 0.2006172839506173
+      },
+      "0.08": {
+        "cases": 1296,
+        "mismatches": 261,
+        "rate": 0.2013888888888889
+      },
+      "0.15": {
+        "cases": 1296,
+        "mismatches": 262,
+        "rate": 0.2021604938271605
+      }
+    },
+    "seed": {
+      "0": {
+        "cases": 324,
+        "mismatches": 58,
+        "rate": 0.17901234567901234
+      },
+      "1": {
+        "cases": 324,
+        "mismatches": 60,
+        "rate": 0.18518518518518517
+      },
+      "10": {
+        "cases": 324,
+        "mismatches": 77,
+        "rate": 0.23765432098765432
+      },
+      "11": {
+        "cases": 324,
+        "mismatches": 77,
+        "rate": 0.23765432098765432
+      },
+      "2": {
+        "cases": 324,
+        "mismatches": 66,
+        "rate": 0.2037037037037037
+      },
+      "3": {
+        "cases": 324,
+        "mismatches": 58,
+        "rate": 0.17901234567901234
+      },
+      "4": {
+        "cases": 324,
+        "mismatches": 66,
+        "rate": 0.2037037037037037
+      },
+      "5": {
+        "cases": 324,
+        "mismatches": 59,
+        "rate": 0.18209876543209877
+      },
+      "6": {
+        "cases": 324,
+        "mismatches": 75,
+        "rate": 0.23148148148148148
+      },
+      "7": {
+        "cases": 324,
+        "mismatches": 72,
+        "rate": 0.2222222222222222
+      },
+      "8": {
+        "cases": 324,
+        "mismatches": 60,
+        "rate": 0.18518518518518517
+      },
+      "9": {
+        "cases": 324,
+        "mismatches": 55,
+        "rate": 0.1697530864197531
+      }
+    }
+  }
+}

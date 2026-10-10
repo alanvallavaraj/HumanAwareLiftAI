@@ -1,0 +1,16 @@
+{
+  "runs": 16848,
+  "passenger_records": 22998183,
+  "matched_arrival_blocks": 1296,
+  "structural_clusters": 108,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261008,
+  "source_sha256": {
+    "scripts/run_aei_extension.py": "fd78572cd7a2e8764c0b1ed8f9cb8887b68d9dbb19acaf2373263c84d32e9a48",
+    "src/aei_extension.py": "3498febffd00c902b35ac3cc7b13f3d407750cc6f4e9f70445ba840087232916",
+    "src/simulator.py": "f082fae71dd9e741a52f56f7f22b147b2219cff68087afeea1842fd510ed62f3"
+  },
+  "result_sha256": "89d46af8760b45a651097c09ab218de7f2739670360281f3eeeafd83101ad9dd",
+  "checks": "All case event rows reconstructed; arrival hashes, group counts, boarding/alighting order, observation horizons and restricted waits verified. Physical transfer capacity asserted during execution.",
+  "interval_note": "Paired fixed-design scenario bootstrap, not building-population or calibration uncertainty. No performance exclusions."
+}

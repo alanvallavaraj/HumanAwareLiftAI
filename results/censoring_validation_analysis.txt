@@ -1,0 +1,59 @@
+{
+  "runs": 5184,
+  "passenger_records": 7076364,
+  "matched_arrival_blocks": 1296,
+  "legacy_runs_matching_archived": 3105,
+  "legacy_runs_compared": 3888,
+  "legacy_runs_not_matching_archived": 783,
+  "archived_parity_note": "Some cases do not reproduce the archived outputs under the current execution environment. The cause is set-iteration tie resolution in the movement rule; all 3,888 cases reproduce under Python 3.9.6 (replay_parity_python39.json). New bounded campaign is reported separately, with paired arrivals and retained events; no rows were excluded based on performance.",
+  "structural_clusters": 108,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261008,
+  "execution_environment": "Local computational workspace, eight Python workers.",
+  "python_version": "3.12.14",
+  "result_sha256": "65a7dfb460515b20ac920729c50387de884167fad06aa4c7afd8ab8582efdd21",
+  "estimand": "Average run-level restricted waiting E[min(time-to-boarding,900)] over all generated passengers; every passenger has at least 900 units follow-up. Counts boarded passengers even if not alighted; unboarded passengers contribute 900. Finite-horizon waiting uses observation end 4500. Completion means destination reached.",
+  "interval_note": "Paired 108-scenario percentile bootstrap, all twelve seeds together. Conditional design-scenario resampling intervals, not calibrated building forecasts.",
+  "estimates": {
+    "access_priority": {
+      "all_restricted_wait_900": 294.2316780165289,
+      "priority_restricted_wait_900": 99.05530692786357,
+      "general_restricted_wait_900": 310.4804349106832,
+      "all_horizon_wait": 678.0740849479488,
+      "all_boarded_by_900": 0.7430963499886483,
+      "completion_fraction": 0.8231310901316188,
+      "priority_completion_fraction": 0.9776302569433362,
+      "general_completion_fraction": 0.808812080803698
+    },
+    "collective": {
+      "all_restricted_wait_900": 286.7660270137465,
+      "priority_restricted_wait_900": 283.3828472670106,
+      "general_restricted_wait_900": 287.05430317567743,
+      "all_horizon_wait": 652.0856303072206,
+      "all_boarded_by_900": 0.757524357022114,
+      "completion_fraction": 0.840449997799683,
+      "priority_completion_fraction": 0.8426004784580721,
+      "general_completion_fraction": 0.840327016371724
+    },
+    "distance_only_nearest": {
+      "all_restricted_wait_900": 303.3235863853484,
+      "priority_restricted_wait_900": 299.8375439561173,
+      "general_restricted_wait_900": 303.646725955459,
+      "all_horizon_wait": 678.5734197945933,
+      "all_boarded_by_900": 0.7407367674537355,
+      "completion_fraction": 0.8377435386225427,
+      "priority_completion_fraction": 0.8406377938424676,
+      "general_completion_fraction": 0.8376424837544103
+    },
+    "occupancy_aware": {
+      "all_restricted_wait_900": 297.79226343392156,
+      "priority_restricted_wait_900": 294.0647111992548,
+      "general_restricted_wait_900": 298.09319611659555,
+      "all_horizon_wait": 668.8811304252915,
+      "all_boarded_by_900": 0.7441468696731567,
+      "completion_fraction": 0.8265929107466967,
+      "priority_completion_fraction": 0.8298053895263604,
+      "general_completion_fraction": 0.8264393754687044
+    }
+  }
+}

@@ -1,0 +1,232 @@
+family,contrast,metric,difference,ci_low,ci_high
+ablation_or_weight,dispatch_only vs occupancy_reference,all_restricted_wait_900,-0.05095497590031073,-0.5057765017747308,0.3916589007667659
+ablation_or_weight,dispatch_only vs occupancy_reference,priority_restricted_wait_900,-0.015013174211560454,-0.5129143777894406,0.46668228286935426
+ablation_or_weight,dispatch_only vs occupancy_reference,general_restricted_wait_900,-0.05320950307924477,-0.5090474787510579,0.39076256787610625
+ablation_or_weight,dispatch_only vs occupancy_reference,all_horizon_wait,-0.3695000592511519,-1.1978516095760654,0.4571778749917978
+ablation_or_weight,dispatch_only vs occupancy_reference,all_boarded_by_900,0.00021065424679056477,-9.737878300532243e-05,0.0005279979612318825
+ablation_or_weight,dispatch_only vs occupancy_reference,all_completion_fraction,7.034456839660752e-05,-0.00020293964117991948,0.00036069751182039845
+ablation_or_weight,dispatch_only vs occupancy_reference,priority_completion_fraction,-0.0001395438806305327,-0.0004496756396864504,0.00015286764870823245
+ablation_or_weight,dispatch_only vs occupancy_reference,general_completion_fraction,7.58396498679037e-05,-0.00019875338411834973,0.0003671210203415289
+ablation_or_weight,dispatch_only vs occupancy_reference,physical_stops,3.4143518518519613,1.8979938271603884,5.140547839506331
+ablation_or_weight,dispatch_only vs occupancy_reference,distance,9.671296296297442,-2.377199074072587,23.475578703703466
+ablation_or_weight,dispatch_only vs occupancy_reference,dwell_car_ticks,0.0,0.0,0.0
+ablation_or_weight,boarding_only vs occupancy_reference,all_restricted_wait_900,-7.146787531241188,-10.349075789855052,-4.355833657563472
+ablation_or_weight,boarding_only vs occupancy_reference,priority_restricted_wait_900,-165.12805237335982,-209.60754682469332,-124.04234512257646
+ablation_or_weight,boarding_only vs occupancy_reference,general_restricted_wait_900,6.259698827473898,4.557800028131631,8.201964277161034
+ablation_or_weight,boarding_only vs occupancy_reference,all_horizon_wait,0.4776108015585123,-0.3098304010713491,1.3887845528698304
+ablation_or_weight,boarding_only vs occupancy_reference,all_boarded_by_900,0.0038814602702093026,0.0012403495998320137,0.006645610788076431
+ablation_or_weight,boarding_only vs occupancy_reference,all_completion_fraction,0.00018187163690874808,-1.9425038399306648e-05,0.00041072782803658884
+ablation_or_weight,boarding_only vs occupancy_reference,priority_completion_fraction,0.11715620563796336,0.07739430253703963,0.16163620522200248
+ablation_or_weight,boarding_only vs occupancy_reference,general_completion_fraction,-0.010945277008185594,-0.015833241276807145,-0.006381699608528177
+ablation_or_weight,boarding_only vs occupancy_reference,physical_stops,0.8680555555556566,-0.1051118827161872,1.834972993826994
+ablation_or_weight,boarding_only vs occupancy_reference,distance,7.238425925927004,1.1980516975295359,13.444618055554287
+ablation_or_weight,boarding_only vs occupancy_reference,dwell_car_ticks,0.0,0.0,0.0
+ablation_or_weight,pickup_exception_only vs occupancy_reference,all_restricted_wait_900,-0.1578690277286796,-0.38460491064347624,0.007862964179042815
+ablation_or_weight,pickup_exception_only vs occupancy_reference,priority_restricted_wait_900,-0.24136664380685602,-0.4773785805732601,-0.05983112971565988
+ablation_or_weight,pickup_exception_only vs occupancy_reference,general_restricted_wait_900,-0.15323846290752385,-0.37706279873505083,0.011242082742573637
+ablation_or_weight,pickup_exception_only vs occupancy_reference,all_horizon_wait,-0.17817828521526735,-0.41162167790828474,-0.006942205075934314
+ablation_or_weight,pickup_exception_only vs occupancy_reference,all_boarded_by_900,2.7886926115550104e-05,3.466883109465302e-06,6.207580166200648e-05
+ablation_or_weight,pickup_exception_only vs occupancy_reference,all_completion_fraction,9.728197466696287e-06,-7.41777541021782e-07,2.2117548665537267e-05
+ablation_or_weight,pickup_exception_only vs occupancy_reference,priority_completion_fraction,-2.0813812310671587e-05,-9.982094903179806e-05,3.997985590542541e-05
+ablation_or_weight,pickup_exception_only vs occupancy_reference,general_completion_fraction,1.0339190614772065e-05,3.749414609482971e-07,2.2227613783395995e-05
+ablation_or_weight,pickup_exception_only vs occupancy_reference,physical_stops,1.446759259259352,0.4682484567899792,2.6620563271604056
+ablation_or_weight,pickup_exception_only vs occupancy_reference,distance,-0.579475308641122,-3.8658564814816145,2.964081790124281
+ablation_or_weight,pickup_exception_only vs occupancy_reference,dwell_car_ticks,0.0,0.0,0.0
+ablation_or_weight,full_priority vs occupancy_reference,all_restricted_wait_900,-7.314411513840611,-10.5167202803187,-4.540420746477424
+ablation_or_weight,full_priority vs occupancy_reference,priority_restricted_wait_900,-165.55458528511997,-209.9532357741977,-124.45890039150422
+ablation_or_weight,full_priority vs occupancy_reference,general_restricted_wait_900,6.084112811838764,4.2735670270090065,8.027136107587904
+ablation_or_weight,full_priority vs occupancy_reference,all_horizon_wait,0.36233753371880084,-0.5285959963986471,1.2726315369899701
+ablation_or_weight,full_priority vs occupancy_reference,all_boarded_by_900,0.003769833555710922,0.0011420236892444092,0.0065957349836870995
+ablation_or_weight,full_priority vs occupancy_reference,all_completion_fraction,0.0001573391493394638,-8.89004031360635e-05,0.0004302966853938577
+ablation_or_weight,full_priority vs occupancy_reference,priority_completion_fraction,0.11718920238480357,0.07745864619337804,0.16167002688751367
+ablation_or_weight,full_priority vs occupancy_reference,general_completion_fraction,-0.010970785649530135,-0.01574394801574145,-0.006476583458853226
+ablation_or_weight,full_priority vs occupancy_reference,physical_stops,3.5455246913579685,2.043576388888931,5.140451388888818
+ablation_or_weight,full_priority vs occupancy_reference,distance,13.994598765433693,2.8093557098771726,26.435204475308716
+ablation_or_weight,full_priority vs occupancy_reference,dwell_car_ticks,0.0,0.0,0.0
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,all_restricted_wait_900,-7.23755929277371,-10.443071066741034,-4.463636074277199
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,priority_restricted_wait_900,-165.50375000477558,-209.81905815043538,-124.38057964666044
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,general_restricted_wait_900,6.172655506075387,4.396339111980053,8.108066556043497
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,all_horizon_wait,0.4597894779678313,-0.3870417356961951,1.359439692693918
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,all_boarded_by_900,0.003758590923702787,0.0011035692464645252,0.006598982589103724
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,all_completion_fraction,0.00016875829703921763,-7.556722481918133e-05,0.0004343792388790096
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,priority_completion_fraction,0.11715487878439512,0.07739171517258157,0.16163484519709503
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,general_completion_fraction,-0.010953251678549436,-0.01570846150534104,-0.0064498015817290215
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,physical_stops,3.6936728395062346,2.1943865740741955,5.270158179012207
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,distance,10.0,0.7463541666657876,19.926157407406727
+ablation_or_weight,priority_weight_1.4 vs occupancy_reference,dwell_car_ticks,0.0,0.0,0.0
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,all_restricted_wait_900,-7.344027620696664,-10.551217606071118,-4.580437871492475
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,priority_restricted_wait_900,-165.6607618753166,-210.21251818838277,-124.56345945411377
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,general_restricted_wait_900,6.057685698062983,4.256145134800355,8.045350481001833
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,all_horizon_wait,0.28871979489377964,-0.5988430862637187,1.231429758601624
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,all_boarded_by_900,0.003779474236875635,0.0011590658908465696,0.006613331459875121
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,all_completion_fraction,0.00016665227526102555,-6.906002262137279e-05,0.0004079960196302129
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,priority_completion_fraction,0.11709360363734567,0.07728612821670938,0.16156526658068707
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,general_completion_fraction,-0.010949943858246991,-0.015736769012918077,-0.006447326660998149
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,physical_stops,3.5208333333332575,1.9976273148148493,5.18371913580238
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,distance,22.157407407408755,8.273456790123419,37.914197530863966
+ablation_or_weight,priority_weight_4.2 vs occupancy_reference,dwell_car_ticks,0.0,0.0,0.0
+reference_comparison,full_priority vs collective,all_restricted_wait_900,-8.733971939896378,-12.01212656323983,-5.733146246980709
+reference_comparison,full_priority vs collective,priority_restricted_wait_900,-166.86372176053635,-211.28394728662724,-125.65453445665423
+reference_comparison,full_priority vs collective,general_restricted_wait_900,4.658250627539644,1.948520246723494,7.267592702305509
+reference_comparison,full_priority vs collective,all_horizon_wait,-1.1996140688313517,-3.286123837739305,0.5485258175607042
+reference_comparison,full_priority vs collective,all_boarded_by_900,0.0038856650553189542,0.00120710628676651,0.006708684274965417
+reference_comparison,full_priority vs collective,all_completion_fraction,0.00031273304752055253,7.448670306971495e-05,0.0005882591245614519
+reference_comparison,full_priority vs collective,priority_completion_fraction,0.11740115369896886,0.07774747691823555,0.16183278774367935
+reference_comparison,full_priority vs collective,general_completion_fraction,-0.010816667774561806,-0.015680500724407145,-0.006296517803061506
+reference_comparison,full_priority vs collective,physical_stops,-35.0054012345679,-68.21396604938258,-8.985879629629604
+reference_comparison,full_priority vs collective,distance,37.86959876543369,10.698668981481593,71.17910879629612
+reference_comparison,full_priority vs collective,dwell_car_ticks,0.0,0.0,0.0
+reference_comparison,full_priority vs distance_only_nearest,all_restricted_wait_900,-29.47676743130046,-37.27853744422249,-22.816829120909052
+reference_comparison,full_priority vs distance_only_nearest,priority_restricted_wait_900,-187.19097101502794,-230.67187931251468,-147.04673793445545
+reference_comparison,full_priority vs distance_only_nearest,general_restricted_wait_900,-16.087404686266893,-23.986454146718625,-9.046720263738148
+reference_comparison,full_priority vs distance_only_nearest,all_horizon_wait,-40.56692455817364,-51.05771977941795,-31.412044403993416
+reference_comparison,full_priority vs distance_only_nearest,all_boarded_by_900,0.019453034132990932,0.014415150141979194,0.025167027029145906
+reference_comparison,full_priority vs distance_only_nearest,all_completion_fraction,0.009634053741868764,0.007030889870923027,0.012347480424063669
+reference_comparison,full_priority vs distance_only_nearest,priority_completion_fraction,0.12615902597753736,0.08606259486449802,0.17138975069073153
+reference_comparison,full_priority vs distance_only_nearest,general_completion_fraction,-0.0014725431196981331,-0.00660054153730488,0.003198471326043491
+reference_comparison,full_priority vs distance_only_nearest,physical_stops,-62.0401234567903,-114.48917824074081,-18.411824845679135
+reference_comparison,full_priority vs distance_only_nearest,distance,783.7469135802476,593.9550347222222,990.3607831790123
+reference_comparison,full_priority vs distance_only_nearest,dwell_car_ticks,0.0,0.0,0.0
+dwell_effect,dwell minus zero: occupancy_reference,all_restricted_wait_900,140.1233301127667,111.27778380232708,170.0852372516837
+dwell_effect,dwell minus zero: occupancy_reference,priority_restricted_wait_900,139.87866543583817,110.78502020535596,169.52807981285554
+dwell_effect,dwell minus zero: occupancy_reference,general_restricted_wait_900,140.13855562806864,111.30561560220244,170.0745825827097
+dwell_effect,dwell minus zero: occupancy_reference,all_horizon_wait,282.40744040352644,227.7971563473805,339.8687171800757
+dwell_effect,dwell minus zero: occupancy_reference,all_boarded_by_900,-0.12078484710024173,-0.15117902575477835,-0.09226890325799521
+dwell_effect,dwell minus zero: occupancy_reference,all_completion_fraction,-0.084379027441288,-0.10794896935978698,-0.062335420332183304
+dwell_effect,dwell minus zero: occupancy_reference,priority_completion_fraction,-0.08351246804378876,-0.10712380154470172,-0.06196697504476062
+dwell_effect,dwell minus zero: occupancy_reference,general_completion_fraction,-0.08445080040499153,-0.10808025193473096,-0.062360141614517826
+dwell_effect,dwell minus zero: occupancy_reference,physical_stops,-561.8055555555554,-711.483159722222,-428.72872299382715
+dwell_effect,dwell minus zero: occupancy_reference,distance,-3260.2222222222217,-4043.271508487654,-2548.514390432098
+dwell_effect,dwell minus zero: occupancy_reference,dwell_car_ticks,7843.111111111111,6915.382388117284,8774.97282021605
+dwell_effect,dwell minus zero: full_priority,all_restricted_wait_900,138.76014959290956,111.72527350667369,167.34350525258736
+dwell_effect,dwell minus zero: full_priority,priority_restricted_wait_900,97.28660652801753,73.9809124253442,123.71435409767957
+dwell_effect,dwell minus zero: full_priority,general_restricted_wait_900,141.3132851182969,112.57100449166799,171.89513281837583
+dwell_effect,dwell minus zero: full_priority,all_horizon_wait,281.20538443476454,226.93825208954465,338.1128710728013
+dwell_effect,dwell minus zero: full_priority,all_boarded_by_900,-0.11868056925886172,-0.1487481802425459,-0.09031487371822752
+dwell_effect,dwell minus zero: full_priority,all_completion_fraction,-0.0842413823222452,-0.10759304088939005,-0.06231358728576505
+dwell_effect,dwell minus zero: full_priority,priority_completion_fraction,-0.023332768091580802,-0.036251037090588065,-0.011715494992441634
+dwell_effect,dwell minus zero: full_priority,general_completion_fraction,-0.08893531902843432,-0.11401646886160707,-0.0659269725938539
+dwell_effect,dwell minus zero: full_priority,physical_stops,-562.3179012345679,-711.0613040123457,-428.48674768518526
+dwell_effect,dwell minus zero: full_priority,distance,-3270.9328703703713,-4057.903125,-2561.7390046296296
+dwell_effect,dwell minus zero: full_priority,dwell_car_ticks,7859.427469135802,6927.641743827161,8799.063040123458
+dwell_effect,dwell minus zero: collective,all_restricted_wait_900,151.76564173847913,122.02615652146123,182.98648031550874
+dwell_effect,dwell minus zero: collective,priority_restricted_wait_900,151.31579558706198,121.55316513390986,182.89510497535156
+dwell_effect,dwell minus zero: collective,general_restricted_wait_900,151.8121900581063,122.07006618908174,182.96042714089015
+dwell_effect,dwell minus zero: collective,all_horizon_wait,304.1764137998326,246.6378945481868,365.18172542703104
+dwell_effect,dwell minus zero: collective,all_boarded_by_900,-0.13410252885757545,-0.16736280643215456,-0.10281939301761814
+dwell_effect,dwell minus zero: collective,all_completion_fraction,-0.09720299425638856,-0.12499486403035288,-0.07084830627066865
+dwell_effect,dwell minus zero: collective,priority_completion_fraction,-0.09696545718014915,-0.12483410489739362,-0.07070326187327815
+dwell_effect,dwell minus zero: collective,general_completion_fraction,-0.09721826744961992,-0.12496903741293831,-0.07081856106840247
+dwell_effect,dwell minus zero: collective,physical_stops,-537.9097222222222,-683.8232060185184,-407.51439043209876
+dwell_effect,dwell minus zero: collective,distance,-3400.793981481481,-4226.715451388889,-2668.1553819444457
+dwell_effect,dwell minus zero: collective,dwell_car_ticks,8090.861111111111,7083.373206018519,9124.119618055554
+dwell_effect,dwell minus zero: distance_only_nearest,all_restricted_wait_900,137.4535333285683,110.96845802681196,165.87955929579323
+dwell_effect,dwell minus zero: distance_only_nearest,priority_restricted_wait_900,137.0000411742627,110.44540783383334,165.19026967210223
+dwell_effect,dwell minus zero: distance_only_nearest,general_restricted_wait_900,137.52154608759548,111.07858894212515,166.03199321801858
+dwell_effect,dwell minus zero: distance_only_nearest,all_horizon_wait,277.5593116798848,225.29520877542438,335.8672515617283
+dwell_effect,dwell minus zero: distance_only_nearest,all_boarded_by_900,-0.12938996146130166,-0.1614926804275999,-0.09902265973317033
+dwell_effect,dwell minus zero: distance_only_nearest,all_completion_fraction,-0.08985561280066567,-0.1166562417397572,-0.06414618062141184
+dwell_effect,dwell minus zero: distance_only_nearest,priority_completion_fraction,-0.09010546482520487,-0.11678413503355992,-0.0644782369466494
+dwell_effect,dwell minus zero: distance_only_nearest,general_completion_fraction,-0.08983429783357066,-0.11656607919260693,-0.06411882819921295
+dwell_effect,dwell minus zero: distance_only_nearest,physical_stops,-565.900462962963,-715.6897569444443,-430.19940200617293
+dwell_effect,dwell minus zero: distance_only_nearest,distance,-3075.7361111111113,-3843.128877314814,-2394.7386574074085
+dwell_effect,dwell minus zero: distance_only_nearest,dwell_car_ticks,8081.530092592592,7066.343171296296,9124.88900462963
+dwell_priority_effect,dwell full_priority vs occupancy_reference,all_restricted_wait_900,-8.67759203369775,-11.503584954919466,-5.929580614075424
+dwell_priority_effect,dwell full_priority vs occupancy_reference,priority_restricted_wait_900,-208.1466441929406,-247.76060417004467,-170.9026683018934
+dwell_priority_effect,dwell full_priority vs occupancy_reference,general_restricted_wait_900,7.258842302067023,5.338013600779368,9.397125939723576
+dwell_priority_effect,dwell full_priority vs occupancy_reference,all_horizon_wait,-0.8397184350430962,-2.5073850119115546,0.7828260286089992
+dwell_priority_effect,dwell full_priority vs occupancy_reference,all_boarded_by_900,0.005874111397090931,0.0024894583442616664,0.009412317431015395
+dwell_priority_effect,dwell full_priority vs occupancy_reference,all_completion_fraction,0.000294984268382259,-0.00010627571520471223,0.0006734285895655244
+dwell_priority_effect,dwell full_priority vs occupancy_reference,priority_completion_fraction,0.17736890233701152,0.13596200554586874,0.222901732309476
+dwell_priority_effect,dwell full_priority vs occupancy_reference,general_completion_fraction,-0.015455304272972925,-0.020722141221151614,-0.01073125031942149
+dwell_priority_effect,dwell full_priority vs occupancy_reference,physical_stops,3.0331790123454994,0.7190972222221432,5.685416666666696
+dwell_priority_effect,dwell full_priority vs occupancy_reference,distance,3.283950617284063,-7.874305555555588,15.073707561729123
+dwell_priority_effect,dwell full_priority vs occupancy_reference,dwell_car_ticks,16.316358024691,4.669405864198074,29.25462962963018
+dwell_interaction,change in priority contrast vs occupancy_reference,all_restricted_wait_900,-1.3631805198571385,-3.797969935012501,1.21156247252471
+dwell_interaction,change in priority contrast vs occupancy_reference,priority_restricted_wait_900,-42.59205890782064,-72.4946566708112,-11.17169991958658
+dwell_interaction,change in priority contrast vs occupancy_reference,general_restricted_wait_900,1.174729490228259,-0.5155650897080684,2.936707458283194
+dwell_interaction,change in priority contrast vs occupancy_reference,all_horizon_wait,-1.202055968761897,-3.5717686947862193,0.8563915794996368
+dwell_interaction,change in priority contrast vs occupancy_reference,all_boarded_by_900,0.002104277841380009,-0.0015586595902925466,0.005490717884317854
+dwell_interaction,change in priority contrast vs occupancy_reference,all_completion_fraction,0.0001376451190427952,-0.0003282115882317055,0.0006021857732793428
+dwell_interaction,change in priority contrast vs occupancy_reference,priority_completion_fraction,0.060179699952207955,0.042527559836237905,0.07949564344943291
+dwell_interaction,change in priority contrast vs occupancy_reference,general_completion_fraction,-0.00448451862344279,-0.006536360061866184,-0.0025214611214090005
+dwell_interaction,change in priority contrast vs occupancy_reference,physical_stops,-0.5123456790124692,-3.4524498456791037,2.4929783950617566
+dwell_interaction,change in priority contrast vs occupancy_reference,distance,-10.71064814814963,-26.418383487654616,3.6178626543211405
+dwell_interaction,change in priority contrast vs occupancy_reference,dwell_car_ticks,16.316358024691,4.669405864198074,29.25462962963018
+dwell_priority_effect,dwell full_priority vs collective,all_restricted_wait_900,-21.739464085465954,-26.80745874009954,-16.822201294952347
+dwell_priority_effect,dwell full_priority vs collective,priority_restricted_wait_900,-220.8929108195808,-260.5055133688384,-183.49513651059152
+dwell_priority_effect,dwell full_priority vs collective,general_restricted_wait_900,-5.8406543122697485,-11.48852153186805,-0.7396595096810128
+dwell_priority_effect,dwell full_priority vs collective,all_horizon_wait,-24.170643433899386,-32.76796232891963,-16.23052981840134
+dwell_priority_effect,dwell full_priority vs collective,all_boarded_by_900,0.019307624654032685,0.013098796848301782,0.026092483014828534
+dwell_priority_effect,dwell full_priority vs collective,all_completion_fraction,0.01327434498166391,0.006445347819055941,0.021353053950958167
+dwell_priority_effect,dwell full_priority vs collective,priority_completion_fraction,0.1910338427875372,0.1483080620956408,0.23625083772067085
+dwell_priority_effect,dwell full_priority vs collective,general_completion_fraction,-0.002533719353376207,-0.011353949674015523,0.006933659597440958
+dwell_priority_effect,dwell full_priority vs collective,physical_stops,-59.413580246913625,-89.74529320987654,-35.01776620370381
+dwell_priority_effect,dwell full_priority vs collective,distance,167.7307098765432,94.84423225308637,256.1826967592592
+dwell_priority_effect,dwell full_priority vs collective,dwell_car_ticks,-231.433641975309,-345.37256944444397,-133.48049768518575
+dwell_interaction,change in priority contrast vs collective,all_restricted_wait_900,-13.005492145569576,-18.241733740825225,-8.398566435894296
+dwell_interaction,change in priority contrast vs collective,priority_restricted_wait_900,-54.029189059044484,-85.35780278445482,-22.14189252311822
+dwell_interaction,change in priority contrast vs collective,general_restricted_wait_900,-10.498904939809393,-15.013075877142619,-6.378828092312614
+dwell_interaction,change in priority contrast vs collective,all_horizon_wait,-22.97102936506809,-30.817586822526803,-15.712748257397969
+dwell_interaction,change in priority contrast vs collective,all_boarded_by_900,0.01542195959871373,0.008836413889851671,0.022419112947601894
+dwell_interaction,change in priority contrast vs collective,all_completion_fraction,0.012961611934143358,0.006222371332784355,0.020927579244639585
+dwell_interaction,change in priority contrast vs collective,priority_completion_fraction,0.07363268908856835,0.05180004307606252,0.09631537917229453
+dwell_interaction,change in priority contrast vs collective,general_completion_fraction,0.008282948421185599,0.0016623548547994222,0.01644114669700362
+dwell_interaction,change in priority contrast vs collective,physical_stops,-24.408179012345727,-41.47770061728412,-9.357908950617452
+dwell_interaction,change in priority contrast vs collective,distance,129.8611111111095,78.28422067901208,190.59311342592557
+dwell_interaction,change in priority contrast vs collective,dwell_car_ticks,-231.433641975309,-345.37256944444397,-133.48049768518575
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,all_restricted_wait_900,-28.170151166959215,-34.87772380391542,-22.085416603498985
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,priority_restricted_wait_900,-226.9044056612731,-266.1073086834492,-189.8836652984127
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,general_restricted_wait_900,-12.295665655565472,-19.030563454563385,-6.350464783523511
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,all_horizon_wait,-36.920851803293885,-50.11892814313006,-24.688678998146894
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,all_boarded_by_900,0.03016242633543087,0.022385777318501644,0.03814673117682244
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,all_completion_fraction,0.015248284220289232,0.00801743979375063,0.023872311940277148
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,priority_completion_fraction,0.19293172271116144,0.1501528239806858,0.23823600511211068
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,general_completion_fraction,-0.0005735643145617919,-0.009504493335254452,0.009610857847198418
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,physical_stops,-58.45756172839515,-90.80669367283957,-31.471469907407545
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,distance,588.5501543209875,450.8412615740739,739.9663966049376
+dwell_priority_effect,dwell full_priority vs distance_only_nearest,dwell_car_ticks,-222.10262345678984,-346.1711033950621,-113.86956018518525
+dwell_interaction,change in priority contrast vs distance_only_nearest,all_restricted_wait_900,1.306616264341244,-5.5069223493045625,7.780359704369847
+dwell_interaction,change in priority contrast vs distance_only_nearest,priority_restricted_wait_900,-39.71343464624519,-69.9837276336883,-8.787660629965181
+dwell_interaction,change in priority contrast vs distance_only_nearest,general_restricted_wait_900,3.7917390307014216,-3.2518521181560076,10.487023701746823
+dwell_interaction,change in priority contrast vs distance_only_nearest,all_horizon_wait,3.6460727548798104,-6.957013806385793,13.440089303817063
+dwell_interaction,change in priority contrast vs distance_only_nearest,all_boarded_by_900,0.010709392202439938,0.005229545849052478,0.01675339323689364
+dwell_interaction,change in priority contrast vs distance_only_nearest,all_completion_fraction,0.005614230478420468,-0.0007618678963238007,0.013084380139638141
+dwell_interaction,change in priority contrast vs distance_only_nearest,priority_completion_fraction,0.06677269673362407,0.04575799150956458,0.08847896379416025
+dwell_interaction,change in priority contrast vs distance_only_nearest,general_completion_fraction,0.0008989788051363412,-0.005371890781702635,0.008285995260185355
+dwell_interaction,change in priority contrast vs distance_only_nearest,physical_stops,3.5825617283951487,-25.486979166666707,34.035725308641936
+dwell_interaction,change in priority contrast vs distance_only_nearest,distance,-195.19675925926003,-304.3945794753081,-94.90449459876473
+dwell_interaction,change in priority contrast vs distance_only_nearest,dwell_car_ticks,-222.10262345678984,-346.1711033950621,-113.86956018518525
+weight_change,priority_weight_1.4 vs -2.8,all_restricted_wait_900,0.07685222106690048,-0.013748369193107379,0.20193683892634587
+weight_change,priority_weight_1.4 vs -2.8,priority_restricted_wait_900,0.050835280344379896,-0.10616938360800354,0.2350865716498818
+weight_change,priority_weight_1.4 vs -2.8,general_restricted_wait_900,0.08854269423662231,-0.010728234524491852,0.22275976710780082
+weight_change,priority_weight_1.4 vs -2.8,all_horizon_wait,0.09745194424903048,-0.027907461808351287,0.2502410293359773
+weight_change,priority_weight_1.4 vs -2.8,all_boarded_by_900,-1.1242632008134912e-05,-6.954490967686077e-05,4.317612161860994e-05
+weight_change,priority_weight_1.4 vs -2.8,all_completion_fraction,1.1419147699753829e-05,-3.3939418765691064e-05,5.44065289124096e-05
+weight_change,priority_weight_1.4 vs -2.8,priority_completion_fraction,-3.432360040844795e-05,-0.00010297080122523283,0.0
+weight_change,priority_weight_1.4 vs -2.8,general_completion_fraction,1.7533970980698754e-05,-3.2900286781498146e-05,6.690375754929422e-05
+weight_change,priority_weight_1.4 vs -2.8,physical_stops,0.14814814814826605,-0.48302469135796855,0.7500578703703692
+weight_change,priority_weight_1.4 vs -2.8,distance,-3.994598765433693,-9.314872685184264,0.9625385802468311
+weight_change,priority_weight_1.4 vs -2.8,dwell_car_ticks,0.0,0.0,0.0
+weight_change,priority_weight_4.2 vs -2.8,all_restricted_wait_900,-0.029616106856053648,-0.14306519587588795,0.07922620030758404
+weight_change,priority_weight_4.2 vs -2.8,priority_restricted_wait_900,-0.10617659019663961,-0.33975928943915845,0.11715246498807676
+weight_change,priority_weight_4.2 vs -2.8,general_restricted_wait_900,-0.026427113775781663,-0.14048488023923297,0.09387070216824323
+weight_change,priority_weight_4.2 vs -2.8,all_horizon_wait,-0.0736177388250212,-0.28077038851241126,0.13775993676993462
+weight_change,priority_weight_4.2 vs -2.8,all_boarded_by_900,9.640681164713172e-06,-5.5383847094217506e-05,7.50996866482528e-05
+weight_change,priority_weight_4.2 vs -2.8,all_completion_fraction,9.313125921561749e-06,-8.412403082340425e-05,9.622851447091128e-05
+weight_change,priority_weight_4.2 vs -2.8,priority_completion_fraction,-9.559874745790342e-05,-0.0002796682521816196,0.0
+weight_change,priority_weight_4.2 vs -2.8,general_completion_fraction,2.0841791283143785e-05,-8.074386358551955e-05,0.00011462322396896508
+weight_change,priority_weight_4.2 vs -2.8,physical_stops,-0.024691358024711008,-0.7354166666668049,0.6969907407406071
+weight_change,priority_weight_4.2 vs -2.8,distance,8.162808641975062,-2.465316358024938,20.580613425926582
+weight_change,priority_weight_4.2 vs -2.8,dwell_car_ticks,0.0,0.0,0.0
+nonadditivity,full effect minus sum of singleton effects,all_restricted_wait_900,0.041200021029567324,-0.32969403809578496,0.43369307376420296
+nonadditivity,full effect minus sum of singleton effects,priority_restricted_wait_900,-0.17015309374176013,-0.8395338027119607,0.4051591452076976
+nonadditivity,full effect minus sum of singleton effects,general_restricted_wait_900,0.030861950351606993,-0.3448504021602702,0.425305855820954
+nonadditivity,full effect minus sum of singleton effects,all_horizon_wait,0.43240507662665095,-0.36392681747836375,1.3020240084313515
+nonadditivity,full effect minus sum of singleton effects,all_boarded_by_900,-0.00035016788740449556,-0.0007660579982451954,1.4832334612468982e-05
+nonadditivity,full effect minus sum of singleton effects,all_completion_fraction,-0.00010460525343258809,-0.00039893193132248814,0.00018774496069842717
+nonadditivity,full effect minus sum of singleton effects,priority_completion_fraction,0.00019335443978141242,-0.00011474691655753988,0.0005263909825607592
+nonadditivity,full effect minus sum of singleton effects,general_completion_fraction,-0.00011168748182721622,-0.0004228531430393645,0.00019854919393968437
+nonadditivity,full effect minus sum of singleton effects,physical_stops,-2.1836419753090013,-3.6868055555557135,-0.7121720679014744
+nonadditivity,full effect minus sum of singleton effects,distance,-2.3356481481496303,-14.158815586421042,9.509355709876399
+nonadditivity,full effect minus sum of singleton effects,dwell_car_ticks,0.0,0.0,0.0

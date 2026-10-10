@@ -1,0 +1,9 @@
+[
+  {
+    "case_index": "30",
+    "controller": "occupancy_aware",
+    "seed": "6",
+    "reason": "Event file row-count mismatch",
+    "all_aggregate_metrics_identical": true
+  }
+]

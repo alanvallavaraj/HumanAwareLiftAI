@@ -1,0 +1,7 @@
+# Related paper repositories reviewed
+
+1. Wan, Lee and Shin, *Traffic pattern-aware elevator dispatching via deep reinforcement learning*, Advanced Engineering Informatics 61 (2024), 102497. Official repository: https://github.com/jswan95/RL-based-traffic-pattern-aware-elevator-dispatching . Reviewed main tree `fb6122c12e66726219ef0d249e55807e43543c00`: a Python entry point, options, discrete-event simulator, passenger/car/controller modules, output handler and saved agent. Its README is brief. We adopt explicit execution entry points and separate simulation, controller and output responsibilities; our controllers are heuristic and have no learned checkpoint.
+
+2. Related elevator group-control constrained optimisation artifact: https://github.com/vodopijaaljosa/egccmop , associated with Applied Soft Computing DOI 10.1016/j.asoc.2021.108277 (not AEI). Reviewed master tree `4630ffa50706acc0e9e720eaa767e2d32ef3b3b1`: R package layout, detailed prerequisites, simulation/configuration, optimisation, statistical analysis and plotting commands. We adopt prerequisites, bounded run options, configuration disclosure and an explicit distinction between reduced examples and the full paper campaign.
+
+Checked 7 October 2026. These structures informed packaging only. No code, trained model or results from either repository were copied. This review does not claim that all ten AEI comparators have public code.

@@ -1,0 +1,38 @@
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{float,calc,amsmath,amssymb,booktabs,longtable,array,graphicx,pdflscape,xurl}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage{microtype}
+\usepackage{geometry}
+\geometry{margin=24mm}
+\usepackage{etoolbox,placeins}
+\AtBeginEnvironment{longtable}{\scriptsize}
+\setlength{\emergencystretch}{3em}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\let\Oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{\Oldincludegraphics[width=\maxwidth,#1]{#2}}
+\makeatother
+\hypersetup{pdfauthor={Alan Immanuel Benjamin Vallavaraj}}
+\graphicspath{{../publishing/figures/}{./}}
+\journal{Advanced Engineering Informatics}
+\date{10 October 2026}
+\begin{document}
+\begin{frontmatter}
+\title{Requirement-aware multi-lift dispatch: restricted waiting and accessibility trade-offs}
+\author[westminster]{Alan Immanuel Benjamin Vallavaraj\corref{cor}}
+\cortext[cor]{Corresponding author.}
+\ead{a.vallavaraj@westminster.ac.uk}
+\affiliation[westminster]{organization={School of Computer Science and Engineering, University of Westminster},addressline={115 New Cavendish Street},city={London},postcode={W1W 6UW},country={United Kingdom}}
+\begin{abstract}
+A lift-dispatch rule can shorten waits for passengers who request priority while lengthening waits for everyone else. This study represents occupancy, direction compatibility and priority requests as explicit dispatch, pickup and boarding rules, and evaluates them in a time-stepped simulator with a restricted mean waiting time that includes every arriving passenger, capped at 900 model time units. A 279,936-run historical campaign shows why this matters: a combined priority configuration has a 5.32\% completed-trip advantage, yet its general-request waiting does not improve, its completion is lower, and a sensitivity imputation for unserved passengers reverses the ranking. The primary evidence is a 16,848-run campaign on a corrected model, covering 108 building and demand scenarios with twelve matched arrival streams and 22,998,183 passenger records. It tests each priority component separately, adds door and transfer delays and varies the dispatch bonus. Priority-first boarding alone produces most of the priority benefit and of the cost to other passengers. With delays, full priority reduces priority-request waiting from 340.66 to 132.51 units relative to an occupancy-matched reference, while general-request waiting rises by 7.26 units (95\% paired scenario-bootstrap interval 5.34 to 9.40). Overall capped waiting falls by 8.68 units, but intervals for horizon-accrued waiting and overall completion include zero. Against collective dispatch, general-request waiting falls instead, so the baseline determines the apparent cost. Bonuses of $-1.4$, $-2.8$ and $-4.2$ give closely similar outcomes, and the trade-off holds at horizons from 300 to 1,200 units. The results quantify a service-allocation choice rather than general controller superiority.
+\end{abstract}
+\begin{keyword}lift group control \sep priority requests \sep knowledge representation \sep restricted waiting \sep simulation \sep reproducibility\end{keyword}
+\end{frontmatter}
+\input{body.tex}
+\bibliographystyle{elsarticle-num}\bibliography{references}
+\clearpage\appendix\input{supplement.tex}\end{document}

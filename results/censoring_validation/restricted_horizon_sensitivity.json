@@ -1,0 +1,94 @@
+{
+  "runs": 5184,
+  "structural_scenarios": 108,
+  "matched_arrival_blocks": 1296,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261008,
+  "note": "Sensitivity reanalysis of the event-recorded campaign at restricted-wait horizons 600, 900 and 1200 model time units. Positive waiting differences indicate deterioration for the priority rule relative to the direction-aware reference.",
+  "contrasts": [
+    {
+      "horizon": 600,
+      "metric": "all",
+      "priority_rule": 212.24179648576026,
+      "direction_aware_reference": 209.02448201172407,
+      "difference": 3.2173144740361863,
+      "ci_low": -3.8219230364833883,
+      "ci_high": 11.262969862750918
+    },
+    {
+      "horizon": 600,
+      "metric": "priority",
+      "priority_rule": 79.5973440670781,
+      "direction_aware_reference": 206.8467050013637,
+      "difference": -127.24936093428559,
+      "ci_low": -155.3895227400335,
+      "ci_high": -99.34528323467828
+    },
+    {
+      "horizon": 600,
+      "metric": "general",
+      "priority_rule": 223.17326890573779,
+      "direction_aware_reference": 209.2158815937415,
+      "difference": 13.957387311996285,
+      "ci_low": 6.664251794348845,
+      "ci_high": 21.805635586990633
+    },
+    {
+      "horizon": 900,
+      "metric": "all",
+      "priority_rule": 294.2316780165289,
+      "direction_aware_reference": 286.7660270137465,
+      "difference": 7.465651002782408,
+      "ci_low": -2.874792341334324,
+      "ci_high": 19.235598403354686
+    },
+    {
+      "horizon": 900,
+      "metric": "priority",
+      "priority_rule": 99.05530692786357,
+      "direction_aware_reference": 283.3828472670106,
+      "difference": -184.32754033914705,
+      "ci_low": -226.90436723823694,
+      "ci_high": -142.32729326293043
+    },
+    {
+      "horizon": 900,
+      "metric": "general",
+      "priority_rule": 310.4804349106832,
+      "direction_aware_reference": 287.05430317567743,
+      "difference": 23.426131735005754,
+      "ci_low": 12.262367827775636,
+      "ci_high": 35.28889751372759
+    },
+    {
+      "horizon": 1200,
+      "metric": "all",
+      "priority_rule": 365.30701592285635,
+      "direction_aware_reference": 353.840921420774,
+      "difference": 11.466094502082342,
+      "ci_low": -2.0967228712984634,
+      "ci_high": 27.004298488978435
+    },
+    {
+      "horizon": 1200,
+      "metric": "priority",
+      "priority_rule": 113.49211281743601,
+      "direction_aware_reference": 349.6490889198609,
+      "difference": -236.1569761024249,
+      "ci_low": -292.73488218436137,
+      "ci_high": -181.16738484023344
+    },
+    {
+      "horizon": 1200,
+      "metric": "general",
+      "priority_rule": 386.43372207272296,
+      "direction_aware_reference": 354.1988935241957,
+      "difference": 32.234828548527275,
+      "ci_low": 17.510310485525398,
+      "ci_high": 47.89227746851501
+    }
+  ],
+  "sha256": {
+    "restricted_horizon_sensitivity_csv": "0604be658162e2fdf21ab7232dadfb1d81ab1336904c0e2e614f151ce10726be"
+  }
+}

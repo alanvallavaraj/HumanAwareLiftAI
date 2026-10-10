@@ -1,0 +1,339 @@
+{
+  "smoke": {
+    "floors": [
+      8
+    ],
+    "lifts": [
+      2
+    ],
+    "population": [
+      200
+    ],
+    "traffic": [
+      "up_peak",
+      "mixed"
+    ],
+    "special_share": [
+      0.08
+    ],
+    "carrying_share": [
+      0.2
+    ],
+    "sensor_noise": [
+      0.05
+    ],
+    "controllers": [
+      "collective",
+      "occupancy_aware",
+      "human_aware"
+    ],
+    "seeds": [
+      0,
+      1
+    ],
+    "duration": 900
+  },
+  "pilot": {
+    "floors": [
+      8,
+      16
+    ],
+    "lifts": [
+      2,
+      4
+    ],
+    "population": [
+      200,
+      800
+    ],
+    "traffic": [
+      "up_peak",
+      "down_peak",
+      "lunch",
+      "mixed"
+    ],
+    "special_share": [
+      0.02,
+      0.08
+    ],
+    "carrying_share": [
+      0.05,
+      0.2
+    ],
+    "sensor_noise": [
+      0.05,
+      0.15
+    ],
+    "controllers": [
+      "collective",
+      "nearest_car",
+      "occupancy_aware",
+      "access_priority",
+      "stability_aware",
+      "human_aware",
+      "layered_access_stability"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "duration": 1800
+  },
+  "full": {
+    "floors": [
+      8,
+      16,
+      32
+    ],
+    "lifts": [
+      2,
+      4,
+      8
+    ],
+    "population": [
+      200,
+      800,
+      2000
+    ],
+    "traffic": [
+      "up_peak",
+      "down_peak",
+      "lunch",
+      "mixed"
+    ],
+    "special_share": [
+      0.02,
+      0.08,
+      0.15
+    ],
+    "carrying_share": [
+      0.05,
+      0.2,
+      0.4
+    ],
+    "sensor_noise": [
+      0.0,
+      0.08,
+      0.18
+    ],
+    "controllers": [
+      "collective",
+      "nearest_car",
+      "occupancy_aware",
+      "access_priority",
+      "stability_aware",
+      "human_aware",
+      "layered_access_stability",
+      "oracle_upper"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "duration": 3600
+  },
+  "full_reduced": {
+    "floors": [
+      8,
+      16,
+      32
+    ],
+    "lifts": [
+      2,
+      4,
+      8
+    ],
+    "population": [
+      200,
+      800,
+      2000
+    ],
+    "traffic": [
+      "up_peak",
+      "down_peak",
+      "lunch",
+      "mixed"
+    ],
+    "special_share": [
+      0.02,
+      0.08,
+      0.15
+    ],
+    "carrying_share": [
+      0.05,
+      0.2,
+      0.4
+    ],
+    "sensor_noise": [
+      0.0,
+      0.08,
+      0.18
+    ],
+    "controllers": [
+      "collective",
+      "nearest_car",
+      "occupancy_aware",
+      "access_priority",
+      "stability_aware",
+      "human_aware",
+      "layered_access_stability",
+      "oracle_upper"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "duration": 3600
+  },
+  "layered_followup": {
+    "floors": [
+      8,
+      16,
+      32
+    ],
+    "lifts": [
+      2,
+      4,
+      8
+    ],
+    "population": [
+      200,
+      800,
+      2000
+    ],
+    "traffic": [
+      "up_peak",
+      "down_peak",
+      "lunch",
+      "mixed"
+    ],
+    "special_share": [
+      0.02,
+      0.08,
+      0.15
+    ],
+    "carrying_share": [
+      0.05,
+      0.2,
+      0.4
+    ],
+    "sensor_noise": [
+      0.0,
+      0.08,
+      0.18
+    ],
+    "controllers": [
+      "layered_access_stability"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "duration": 3600
+  },
+  "access_sensitivity": {
+    "floors": [
+      16
+    ],
+    "lifts": [
+      4
+    ],
+    "population": [
+      800,
+      2000
+    ],
+    "traffic": [
+      "up_peak",
+      "mixed"
+    ],
+    "special_share": [
+      0.08,
+      0.15
+    ],
+    "carrying_share": [
+      0.2
+    ],
+    "sensor_noise": [
+      0.08
+    ],
+    "controllers": [
+      "access_priority",
+      "human_aware"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "duration": 3600
+  },
+  "high_instability": {
+    "floors": [
+      16,
+      32
+    ],
+    "lifts": [
+      4,
+      8
+    ],
+    "population": [
+      800,
+      2000
+    ],
+    "traffic": [
+      "up_peak",
+      "mixed"
+    ],
+    "special_share": [
+      0.08
+    ],
+    "carrying_share": [
+      0.4
+    ],
+    "sensor_noise": [
+      0.18
+    ],
+    "controllers": [
+      "collective",
+      "stability_aware",
+      "human_aware"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "duration": 3600
+  }
+}

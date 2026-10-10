@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the associated paper or this software record."
+title: "HumanAwareLiftAI"
+authors:
+  - family-names: "Vallavaraj"
+    given-names: "Alan Immanuel Benjamin"
+    affiliation: "University of Westminster"
+repository-code: "https://github.com/alanvallavaraj/HumanAwareLiftAI"
+abstract: "Synthetic multi-lift dispatch with explicit priority and occupancy rules, full-cohort restricted waiting, and reproducible service-allocation trade-offs."
+keywords:
+  - elevator group control
+  - priority requests
+  - restricted waiting
+  - simulation
+  - reproducibility
+license:
+  - MIT
+  - CC-BY-4.0

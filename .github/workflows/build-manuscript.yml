@@ -1,0 +1,42 @@
+name: Build manuscript PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'paper/**.tex'
+      - 'paper/**.bib'
+      - 'paper/**.bst'
+      - 'paper/**.cls'
+      - 'publishing/figures/**'
+      - '.github/workflows/build-manuscript.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile manuscript
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: manuscript.tex
+          working_directory: paper
+          latexmk_use_xelatex: false
+
+      - name: Commit rebuilt PDF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add paper/manuscript.pdf
+          if git diff --cached --quiet; then
+            echo "No PDF changes to commit."
+          else
+            git commit -m "Rebuild manuscript PDF from LaTeX"
+            git push
+          fi
