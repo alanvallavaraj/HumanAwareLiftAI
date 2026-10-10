@@ -5,6 +5,12 @@ authors:
   - family-names: "Vallavaraj"
     given-names: "Alan Immanuel Benjamin"
     affiliation: "University of Westminster"
+doi: "10.5281/zenodo.23288500"
+version: "v1.0.0"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23288499"
+    description: "Concept DOI for all versions"
 repository-code: "https://github.com/alanvallavaraj/HumanAwareLiftAI"
 abstract: "Synthetic multi-lift dispatch with explicit priority and occupancy rules, full-cohort restricted waiting, and reproducible service-allocation trade-offs."
 keywords:
