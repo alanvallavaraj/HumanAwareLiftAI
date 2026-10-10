@@ -4,6 +4,8 @@
 
 [Reproduction instructions](REPRODUCING.md) · [LaTeX manuscript](paper/) · [Licensing](LICENSING.md)
 
+**Archived release:** [doi:10.5281/zenodo.23288500](https://doi.org/10.5281/zenodo.23288500) (v1.0.0; all versions: [doi:10.5281/zenodo.23288499](https://doi.org/10.5281/zenodo.23288499))
+
 The current manuscript is **Requirement-aware multi-lift dispatch: restricted waiting and accessibility trade-offs**, prepared for Advanced Engineering Informatics.
 
 The study evaluates explicit priority, occupancy and direction rules in a synthetic multi-lift simulator. It does not implement learned control, physical pressure sensing, adaptive motion, waiting-time prediction or display/voice interaction.
@@ -35,7 +37,7 @@ The historical 279,936-run campaign is used only to show how completed-trip mean
 
 **Replay parity.** The legacy movement rule resolves equidistant target floors through Python set iteration order, which differs between Python 3.9 and 3.11+. Under Python 3.9.6, all 3,888 replayed legacy cases reproduce the historical archive on all eighteen metrics; under Python 3.11–3.12 the same 3,105 match. The corrected campaign shares the movement rule and reproduces under Python 3.11+ (it ran on Python 3.12.1). See [REPRODUCING.md](REPRODUCING.md).
 
-The archived release on Zenodo contains the code, all datasets and the reproduction scripts; the submitted manuscript is left out of the archive.
+The archived release on Zenodo ([doi:10.5281/zenodo.23288500](https://doi.org/10.5281/zenodo.23288500)) contains the code, all datasets and the reproduction scripts; the submitted manuscript is left out of the archive.
 
 ## Licence
 

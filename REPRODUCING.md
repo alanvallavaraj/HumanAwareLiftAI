@@ -1,5 +1,7 @@
 # Reproduction instructions
 
+The archived copy of this repository is on Zenodo at https://doi.org/10.5281/zenodo.23288500 (v1.0.0). It excludes the manuscript files.
+
 Run commands from the repository root. Simulation is standard-library Python; analyses require NumPy and figures require Matplotlib. Every dataset used below is in this repository, so nothing is downloaded.
 
 ```sh
