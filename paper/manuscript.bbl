@@ -237,9 +237,8 @@ P.~Royston, M.~K.~B. Parmar, {Restricted mean survival time: an alternative to
   {\path{doi:10.1186/1471-2288-13-152}}.
 
 \bibitem{dataset}
-A.~I.~B. Vallavaraj, {[dataset] HumanAwareLiftAI: synthetic lift-dispatch
-  experiments and passenger-event records}, Zenodo, v1.0.0 (2026).
-\newblock \href {https://doi.org/10.5281/zenodo.23288500}
-  {\path{doi:10.5281/zenodo.23288500}}.
+{Anonymised for review}, {[dataset] Simulation code, data and passenger-event
+  records (title withheld for anonymised review)}, Persistent repository
+  record; identifier given on the title page (2026).
 
 \end{thebibliography}
