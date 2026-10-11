@@ -6,7 +6,7 @@
 
 **Archived release:** [doi:10.5281/zenodo.23288500](https://doi.org/10.5281/zenodo.23288500) (v1.0.0; all versions: [doi:10.5281/zenodo.23288499](https://doi.org/10.5281/zenodo.23288499))
 
-The current manuscript is **Requirement-aware multi-lift dispatch: restricted waiting and accessibility trade-offs**, prepared for Advanced Engineering Informatics.
+The current manuscript is **Requirement-aware multi-lift dispatch: restricted waiting and accessibility trade-offs**, under double-anonymised journal review. `paper/manuscript.pdf` is the anonymised manuscript; author details are in `paper/title_page.pdf`.
 
 The study evaluates explicit priority, occupancy and direction rules in a synthetic multi-lift simulator. It does not implement learned control, physical pressure sensing, adaptive motion, waiting-time prediction or display/voice interaction.
 
@@ -26,7 +26,7 @@ The historical 279,936-run campaign is used only to show how completed-trip mean
 
 | Artifact | Purpose |
 | --- | --- |
-| [PDF](paper/manuscript.pdf) | Current manuscript |
+| [PDF](paper/manuscript.pdf) | Anonymised manuscript (author details in [title page](paper/title_page.pdf)) |
 | [Source and highlights](paper/) | Elsevier template, bibliography and highlights; `scripts/build_submission_package.py` builds the upload ZIP |
 | [Corrected campaign](results/aei_extension/) | Protocol, per-run outcomes, paired intervals, horizon sensitivity and verification |
 | [Historical reanalysis](results/reviewer_analysis/) | Group outcomes, clustered intervals and censoring sensitivity |
