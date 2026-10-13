@@ -1,5 +1,5 @@
-- Completed-trip waiting means can overstate lift-dispatch gains
+- Passenger requirements are encoded as explicit, traceable lift-dispatch rules
+- Rule-by-rule tests show priority-first boarding drives most of the effect
 - Restricted waiting over all arrivals shows who bears the cost of priority
-- Priority-first boarding alone delivers most of the priority-service benefit
 - General requests wait 6-7 units longer than under an occupancy-matched rule
-- Effects hold under door and transfer delays and three priority bonus weights
+- Completed-trip waiting means can overstate lift-dispatch gains

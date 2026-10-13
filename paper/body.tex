@@ -1,54 +1,70 @@
 \section{Introduction}\label{introduction}
 
-A lift can arrive promptly and still provide poor service if the car has insufficient space to board waiting passengers. Priority boarding introduces a second question: how should a group of cars serve an explicitly prioritised request while maintaining reasonable service for the remaining passengers? A building-wide average can conceal both an unequal allocation of waiting time and passengers who never board during the observation period.
+A lift can arrive promptly and still provide poor service if the car has no room for the passengers waiting. Priority boarding raises a second question: how should a group of cars serve passengers who explicitly request priority, for example because of an accessibility need, while keeping reasonable service for everyone else? A building-wide average can conceal both an unequal allocation of waiting time and passengers who never board during the observation period.
 
-Occupancy-aware group dispatch, traffic-aware learning and priority scheduling have already been studied in recent work on lift group control \cite{ref1,ref3,ref5}. Occupancy sensing, coordinated dispatch and accessibility priority are therefore not claimed as new concepts here. The question is narrower: what service trade-offs arise when occupancy and priority requirements are represented by explicit rules, and do the conclusions survive an evaluation that includes every arriving passenger?
+For a building operator, granting priority is a decision about how service is allocated, and it needs two kinds of support. The first is a representation in which each passenger requirement is explicit and can be traced to the controller action that serves it. The second is an evaluation that shows who gains and who pays. Current dispatch research offers limited help with either. Metaheuristic and multi-objective controllers fold requirements into weighted or constrained objectives \cite{hanif2023,vodopija2022,beamurgia2022}, and learned dispatchers encode them in a reward and a policy network \cite{ref3,wan2026}, so the contribution of each requirement to the outcome is hard to isolate. Evaluations often report building-wide or completed-trip averages, which can hide the cost of priority to other passengers.
 
-The study uses two campaigns. A 279,936-run historical factorial campaign shows how completed-trip means can misstate the effect of a priority rule when completion differs between configurations. A 16,848-run campaign on a corrected model, with matched arrival streams and complete passenger-event records, provides the primary evidence. It separates the priority rule into its components, adds door and transfer delays, varies the dispatch bonus and evaluates every arrival over a common horizon. An intermediate event-recording campaign on the legacy model is superseded by the corrected campaign and reported in \ref{app:legacy}.
+Occupancy-aware group dispatch, traffic-aware learning and priority scheduling have already been studied \cite{ref1,ref3,ref5}, so occupancy sensing, coordinated dispatch and accessibility priority are not claimed as new concepts here. The question is narrower: when occupancy and priority requirements are represented as explicit rules, which rule produces which effect, who bears the cost, and do the conclusions survive an evaluation that includes every arriving passenger?
 
-The study makes three contributions. First, it maps passenger and car facts explicitly to dispatch, pickup and boarding rules (Table~\ref{tab:rules} and Eqs.~\eqref{eq:score}--\eqref{eq:boarding}), so that each service requirement can be traced to a rule and to the outcome used to evaluate it. Second, it evaluates those rules with a restricted mean waiting time that includes unboarded passengers and is reported separately for priority and general requests, and it shows how completed-trip means can misstate the result. Third, matched-arrival ablation, delay and bonus experiments locate the source of the priority benefit and quantify who bears its cost, with paired scenario-bootstrap intervals. No learning algorithm or physical ride-comfort controller is proposed.
+The study answers this question with a requirement-aware rule base and matched-arrival simulation. A 16,848-run campaign on a corrected model, with identical arrival streams across configurations and complete passenger-event records, provides the primary evidence. It switches the priority rules on one at a time, adds door and transfer delays, varies the dispatch bonus and evaluates every arrival over a common horizon. An earlier 279,936-run factorial campaign shows how completed-trip means can misstate the effect of a priority rule when completion differs between configurations.
+
+The paper makes four contributions.
+\begin{enumerate}
+\item \emph{Requirement-to-rule representation.} Passenger and car facts are mapped to three explicit rules for dispatch, pickup and boarding, and each rule is linked to the outcome used to evaluate it (Figure~\ref{fig:rules}, Table~\ref{tab:rules}). Every requirement can therefore be traced from fact to action to outcome.
+\item \emph{All-arrival evaluation.} The rules are evaluated with a restricted mean waiting time that includes passengers who have not boarded and is reported separately for priority and general requests. The historical campaign shows how completed-trip means can misstate the conclusion.
+\item \emph{Rule-level attribution.} Matched-arrival experiments attribute the effect of priority to individual rules: priority-first boarding alone produces most of the benefit and most of the cost. The trade-off produced by the full rule base holds under door and transfer delays, three dispatch bonuses and four horizons, with paired scenario-bootstrap intervals.
+\item \emph{Decision support for a priority policy.} The findings are turned into guidance for specifying and auditing a priority policy (Section~\ref{sec:policy}), and all code, data and passenger records are openly archived.
+\end{enumerate}
+No learning algorithm or physical ride-comfort controller is proposed.
+
+Section~\ref{related-work} reviews related work. Section~\ref{requirement-representation-and-dispatch-rules} defines the rule base, Section~\ref{experimental-design-and-outcomes} the experiments and outcomes, and Section~\ref{results} reports the results. Section~\ref{discussion} discusses their use for setting a priority policy and their limitations, and Section~\ref{conclusions} concludes.
 
 \section{Related work}\label{related-work}
 
-\subsection{Lift group control and passenger information}\label{lift-group-control-and-passenger-information}
+\subsection{Lift group control}\label{lift-group-control-and-passenger-information}
 
-Wang et al.~use occupancy information and usage-pattern learning to support lift group control \cite{ref1}. Wan et al.~address traffic-aware dispatch with reinforcement learning \cite{ref3}. Han et al.~investigate priority scheduling using image analytics for passengers requiring priority access \cite{ref5}. These are the closest application precedents. The present study does not reimplement their complete systems.
+Lift group control assigns hall calls to cars so as to reduce waiting and journey times under changing traffic. Earlier approaches include fuzzy control \cite{ref11,ref16,ref25}, heuristic search \cite{ref12}, genetic and tabu search \cite{ref13,ref15}, multi-agent reinforcement learning \cite{ref26} and combinatorial optimisation \cite{ref28}, and double-deck installations add further decisions \cite{ref24}. Recent work has followed several lines. Metaheuristic controllers have been reviewed by Hanif and Mohammad \cite{hanif2023}; Vodopija et al.~formulate group control as a constrained multi-objective optimisation problem \cite{vodopija2022}; Beamurgia et al.~improve the waiting-time and energy performance of a bi-objective genetic algorithm through passenger-flow estimation \cite{beamurgia2022}; and Wu and Yang study scheduling algorithms under complex traffic patterns \cite{wu2024}. Heuristic dispatch has also been analysed with a finite-state-machine representation of the group \cite{gharbi2024}. Learning-based methods include occupancy-aware deep learning of usage patterns \cite{ref1}, traffic-pattern-aware deep reinforcement learning \cite{ref3}, and a combination of imitation learning and deep reinforcement learning for a semi-Markov formulation of dispatch \cite{wan2026}. Destination control, in which passengers register their destinations before boarding, raises its own arrival-modelling and planning questions \cite{ref27,siikonen2026}.
 
-Earlier dispatch approaches include fuzzy control \cite{ref11,ref16,ref25}, heuristic search \cite{ref12}, genetic and tabu search \cite{ref13,ref15}, multi-agent reinforcement learning \cite{ref26} and combinatorial optimisation \cite{ref28}. Double-deck systems introduce further installation-specific decisions \cite{ref24}. These studies motivate comparing decision rules within a shared environment, while recognising that a simplified comparator does not stand in for an independently validated industrial controller.
+Priority for passengers with special needs has been addressed by detecting such passengers with image analytics and scheduling them first \cite{ref5}, and camera-assisted group control and passenger detection have been studied more broadly \cite{ref17,ref20,ref21}. Occupancy tracking in buildings \cite{ref19} and thermal-camera assessment of occupant comfort \cite{ref18} concern distinct measurements and do not justify inferring a passenger's accessibility requirements from appearance. In the present experiments, a priority request is a supplied binary input, not the output of a camera or a diagnosis. The methods above mainly optimise aggregate waiting, journey time or energy; how the cost of priority is distributed across passenger groups is not their primary outcome. The closest systems \cite{ref1,ref3,ref5} are not reimplemented here.
 
-Camera-assisted group control and passenger detection have also been investigated \cite{ref17,ref20,ref21}. Occupancy tracking in buildings \cite{ref19} and thermal-camera assessment of occupant comfort \cite{ref18} concern distinct measurements. They do not justify inferring a passenger's accessibility requirements or stability from appearance. In the present experiments, a priority request is a supplied binary input, not the output of a camera or a diagnosis.
+\subsection{Rule-based decisions, priority and fairness}\label{representation-and-evaluation}
 
-\subsection{Representation and evaluation}\label{representation-and-evaluation}
+A rule base is one of the most common and natural explainable frameworks for knowledge representation, which is why rule-based systems remain a key approach in explainable artificial intelligence \cite{yang2022}. In scheduling, explicit priority and dispatching rules are valued for transparency and speed: they have been compared with heuristics for online scheduling \cite{xiong2024}, evaluated for decentralised multi-project scheduling \cite{mao2024}, designed automatically by genetic programming \cite{luo2022} and combined with metaheuristics in interpretable rule-based schedulers \cite{barut2024}. When people are served, priority must also be weighed against fairness, as in rescue-team deployment that considers both \cite{tang2026}, equitable distribution of work among delivery couriers \cite{martinez2024} and appointment scheduling under a fairness policy \cite{ala2022}.
 
-Occupant-presence models \cite{ref14}, uncertain passenger-arrival formulations \cite{ref27} and independently developed lift simulators \cite{ref22,ref23,ref29} show that performance depends on the demand and movement models. Digital-twin architectures \cite{ref30,ref31} provide context for linking observations and decisions, but an offline time-stepped simulation is not a deployed digital twin.
+These studies usually build priority or fairness into the objective or into the design of the rules. The present study takes the complementary route of a decision-support evaluation: the rules are fixed and explicit, and the evaluation reports the service each group receives, so that the trade-off is visible rather than resolved inside a composite score. The representation is a small set of facts and rules rather than a learned policy, ontology reasoner or general-purpose knowledge graph. Its purpose is traceability: each requirement maps to an action and to the outcome used to judge it.
 
-Scheduling frameworks for automated storage yards \cite{ref2}, shared manufacturing \cite{ref4} and cloud--edge production \cite{ref10} keep the state representation, the decision mechanism and the evaluation distinct. Human-centred decision studies make the same separation for people's requirements: preference-aware task allocation \cite{ref7}, context-aware motion prediction \cite{ref8}, knowledge-integrated assembly planning \cite{ref9}, ergonomic role allocation \cite{ref32} and evacuation-choice modelling \cite{ref6} each treat human requirements as declared inputs whose effects are evaluated separately. Here the representation is a small set of explicit facts and rules rather than a learned policy, ontology reasoner or general-purpose knowledge graph. Its purpose is traceability: each requirement maps to an action and to the outcome used to judge it.
+\subsection{Evaluating service over a finite horizon}\label{observation-horizons-and-the-research-question}
 
-\subsection{Observation horizons and the research question}\label{observation-horizons-and-the-research-question}
+Simulation is the usual way to compare dispatch rules; standards recommend round-trip-time calculation for conceptual design before simulation \cite{so2022,siikonen2026}. Simulated performance depends on the demand and movement models, as occupant-presence models \cite{ref14}, uncertain passenger-arrival formulations \cite{ref27} and independently developed simulators, including an open-source tool \cite{ref22,ref23,ref29,tartan2024}, make clear. How long individual passengers wait matters, not only the average: waiting times have been examined in relation to stress in human--lift interaction \cite{shiomi2025}.
 
 Completed-trip waiting is conditional on reaching the destination before observation ends, and this condition can differ between controllers. A lower conditional mean can coexist with more unserved passengers, so it cannot alone identify a population-wide service gain. The present study therefore evaluates a restricted mean waiting time from arrival to boarding over all generated passengers, the waiting analogue of the restricted mean survival time used for censored time-to-event outcomes \cite{refRMST}. It reports destination completion separately and distinguishes group means from averages of within-run ratios.
 
 \section{Requirement representation and dispatch rules}\label{requirement-representation-and-dispatch-rules}
 
-\subsection{State and requirements}\label{state-and-requirements}
+\subsection{State, requirements and rule structure}\label{state-and-requirements}
 
-At time $t$, car $c$ is represented by its floor $x_c$, direction $d_c\in\{-1,0,1\}$, capacity $C$, onboard passenger set, and target floors. Its load ratio is $\rho_c=n_c/C$, where $n_c$ is the number of passengers on board. A request contains an arrival time, origin, destination and priority indicator $p_i\in\{0,1\}$. The priority indicator represents an externally supplied request for prioritised service. It does not represent a diagnosis, impairment severity or an inferred instability risk.
+At time $t$, car $c$ is represented by its floor $x_c$, direction $d_c\in\{-1,0,1\}$, capacity $C$, onboard passenger set and target floors. Its load ratio is $\rho_c=n_c/C$, where $n_c$ is the number of passengers on board. A request contains an arrival time, origin, destination and priority indicator $p_i\in\{0,1\}$. The priority indicator represents an externally supplied request for prioritised service. It does not represent a diagnosis, impairment severity or an inferred instability risk.
 
-Table~\ref{tab:rules} links the state facts to rule actions and to the outcome used to evaluate each requirement. Capacity is a count of $C=13$ passengers per car. Neither passenger mass nor the spatial footprint of mobility aids is represented, so an occupancy ratio is a passenger-count ratio and cannot establish that a car has sufficient accessible floor space in a real installation.
+Figure~\ref{fig:rules} summarises the rule base. Facts about cars, calling floors and requests feed three rules; each rule drives one controller action; and every action is judged by the same group-level outcomes. Four binary switches turn the rules on and off, which is what allows the experiments to attribute an outcome to a rule. Table~\ref{tab:rules} lists the same structure by requirement. Capacity is a count of $C=13$ passengers per car. Neither passenger mass nor the spatial footprint of mobility aids is represented, so an occupancy ratio is a passenger-count ratio and cannot establish that a car has sufficient accessible floor space in a real installation.
 
-\begin{longtable}{@{}p{.22\linewidth}p{.21\linewidth}p{.30\linewidth}p{.19\linewidth}@{}}
-\caption{Requirement facts, rule actions and evaluation outcomes.}\label{tab:rules}\\
-\toprule Requirement & Facts used & Rule action & Evaluation outcome\\\midrule\endhead
-\bottomrule\endlastfoot
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{rule_structure.pdf}
+\caption{Structure of the rule base. Facts about cars, calling floors and requests feed the dispatch, pickup and boarding rules (Eqs.~\eqref{eq:score}--\eqref{eq:boarding}); each rule drives one action; and every action is evaluated by restricted waiting for each request group (Eq.~\eqref{eq:restricted}) and by the secondary outcomes. The switches $O$, $D$, $B$ and $E$ enable the rules independently.}\label{fig:rules}\end{figure}
+
+\begin{table}[H]\centering
+\caption{Requirement facts, rule actions and evaluation outcomes.}\label{tab:rules}
+\small\begin{tabular}{@{}p{.22\linewidth}p{.21\linewidth}p{.30\linewidth}p{.19\linewidth}@{}}
+\toprule Requirement & Facts used & Rule action & Evaluation outcome\\\midrule
 Reach a waiting request & Car floor; request floor & Minimise distance, with a direction term (Eq.~\eqref{eq:score}) & Restricted wait\\
 Account for occupied capacity & Passenger count; capacity & Load penalty (Eq.~\eqref{eq:score}); pickup gate (Eq.~\eqref{eq:pickup}) & Boarding and completion\\
 Prioritise a supplied request & Priority flag; remaining capacity & Dispatch bonus (Eq.~\eqref{eq:score}), pickup exception (Eq.~\eqref{eq:pickup}) and priority-first boarding (Eq.~\eqref{eq:boarding}) & Priority-group restricted wait\\
 Preserve service for other requests & Arrival order; direction & Arrival-order boarding within groups, with direction compatibility (Eq.~\eqref{eq:boarding}) & General-group restricted wait\\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsection{Assignment and pickup}\label{assignment-and-pickup}
 
-Every eight time steps, each floor $f$ with a non-empty queue $Q_f$ is assigned a car. Let $\delta_f$ be the majority direction of the queue and $\pi_f=1$ if any request in $Q_f$ has $p_i=1$. Four binary flags describe a configuration: the occupancy rules $O$, the priority dispatch bonus $D$, priority-first boarding $B$ and the priority pickup exception $E$. The assigned car minimises
+Every eight time steps, each floor $f$ with a non-empty queue $Q_f$ is assigned a car. Let $\delta_f$ be the majority direction of the queue and $\pi_f=1$ if any request in $Q_f$ has $p_i=1$. Four binary switches describe a configuration: the occupancy rules $O$, the priority dispatch bonus $D$, priority-first boarding $B$ and the priority pickup exception $E$. The assigned car minimises
 \begin{equation}
 \begin{split}
 s_c(f,t) ={}& |x_c-f| + 2.5\,\mathbf{1}[d_c\neq 0,\ \delta_f\neq 0,\ d_c\neq\delta_f] + 10\,O\,\max(0,\rho_c-0.78)\\
@@ -56,7 +72,7 @@ s_c(f,t) ={}& |x_c-f| + 2.5\,\mathbf{1}[d_c\neq 0,\ \delta_f\neq 0,\ d_c\neq\del
 \end{split}
 \label{eq:score}
 \end{equation}
-where $\beta=2.8$ unless stated otherwise and $\varepsilon\in[0,0.02)$ breaks ties. The collective reference is the configuration with all four flags off.
+where $\beta=2.8$ unless stated otherwise and $\varepsilon\in[0,0.02)$ breaks ties. The collective reference is the configuration with all four switches off.
 
 When a car reaches an assigned floor, the pickup gate decides whether it opens for the waiting queue. With $n'_c$ passengers remaining after alighting, $\rho'_c=n'_c/C$ and queue length $q_f$, occupancy configurations ($O=1$) apply, in order,
 \begin{equation}
@@ -88,32 +104,12 @@ These abstractions support a comparison of rules within the model; they are not 
 
 \section{Experimental design and outcomes}\label{experimental-design-and-outcomes}
 
-\subsection{Historical factorial campaign}\label{historical-factorial-campaign}
-
-Table~\ref{tab:historical} summarises the historical campaign. Seven factors give 2,916 combinations, which with eight configurations and twelve seeds give 279,936 runs. Each run generates Poisson arrivals with traffic-dependent intensity for 3,600 steps and allows up to 900 clearance steps. The historical simulator is the legacy model: it predates the corrections of Section~\ref{sec:design} and uses no door or transfer delay.
-
-\begin{longtable}{@{}p{.36\linewidth}p{.56\linewidth}@{}}
-\caption{Historical factorial design.}\label{tab:historical}\\
-\toprule Factor & Levels\\\midrule\endhead
-\bottomrule\endlastfoot
-Floors & 8, 16, 32\\
-Cars & 2, 4, 8\\
-Population scale & 200, 800, 2,000\\
-Traffic & Up-peak, down-peak, lunch, mixed\\
-Priority-request share & 0.02, 0.08, 0.15\\
-Carrying-object share & 0.05, 0.20, 0.40\\
-Synthetic noise & 0.00, 0.08, 0.18\\
-Configurations and seeds & Eight historical configurations; seeds 0--11\\
-\end{longtable}
-
-The historical outputs contain run-level means and counts, not individual waiting or censoring times. Conditional mean waiting and completion can be reconstructed, but a passenger-level restricted mean cannot be recovered from those summaries. The campaign is therefore used only to show how completed-trip means behave (Section~\ref{sec:historical-results}). Its exposure, noise and guidance outputs are not outcomes. The full experiment history is listed in Table~\ref{tab:history}.
-
-\subsection{Corrected matched-arrival campaign}\label{sec:design}
+\subsection{Matched-arrival campaign}\label{sec:design}
 
 The primary evidence comes from a bounded campaign on a corrected model version (Table~\ref{tab:design}). The diagonal floor/car pairs (8, 2), (16, 4) and (32, 8) are crossed with three population scales, four traffic patterns and three priority-request shares, giving 108 structural scenarios, each run with twelve seeds. Thirteen configurations share identical arrival records within each scenario--seed pair. This was verified with a hash of passenger identifier, origin, destination, arrival time and synthetic attributes.
 
 \begin{table}[htbp]\centering
-\caption{Design of the corrected matched-arrival campaign.}\label{tab:design}
+\caption{Design of the matched-arrival campaign.}\label{tab:design}
 \small\begin{tabular}{@{}p{.28\linewidth}p{.66\linewidth}@{}}
 \toprule Design element & Value\\\midrule
 Structural scenarios & Floor/car pairs (8, 2), (16, 4), (32, 8) $\times$ population 200, 800, 2,000 $\times$ four traffic patterns $\times$ priority share 0.02, 0.08, 0.15 $=108$\\
@@ -128,9 +124,9 @@ Execution & Python 3.12.1 and NumPy 2.3.5; source files and protocol fixed and h
 \end{tabular}
 \end{table}
 
-Nine configurations have no door or transfer delay. Five of them form the ablation: an occupancy reference with $O=1$ and no priority component, the dispatch bonus alone ($D=1$), priority-first boarding alone ($B=1$), the pickup exception alone ($E=1$), and the full priority rule ($D=B=E=1$). Holding the occupancy penalty and pickup gate fixed in all five arms makes the contribution of each component, including the exception, interpretable. Two further full-rule arms use $\beta=1.4$ and $\beta=4.2$, and collective dispatch ($O=0$) and the distance-only nearest car complete the set. Four configurations repeat the occupancy reference, full priority, collective and distance-only arms with the delay model of Section~\ref{boarding-and-movement}.
+Nine configurations have no door or transfer delay. Five of them form the rule ablation: an occupancy reference with $O=1$ and no priority rule, the dispatch bonus alone ($D=1$), priority-first boarding alone ($B=1$), the pickup exception alone ($E=1$), and the full priority rule base ($D=B=E=1$). Holding the occupancy penalty and pickup gate fixed in all five arms makes the contribution of each priority rule, including the exception, interpretable. Two further full-rule arms use $\beta=1.4$ and $\beta=4.2$, and collective dispatch ($O=0$) and the distance-only nearest car complete the set. Four configurations repeat the occupancy reference, full priority, collective and distance-only arms with the delay model of Section~\ref{boarding-and-movement}.
 
-Two corrections distinguish this model from the legacy simulator, and both apply to every configuration. First, a served or empty target floor is removed when a car stops; the legacy simulator could retain such stale targets and travel to them unnecessarily. Second, the tie-break term $\varepsilon$ in Eq.~\eqref{eq:score} is a counter-based pseudorandom value keyed by seed, time, calling floor and car, so every configuration sees the same values; the legacy simulator drew it from a configuration-specific random stream shared with unused comfort accounting. Contrasts are therefore computed only within the corrected model. An earlier 5,184-run event-recording campaign on the legacy simulator is superseded by this campaign and reported in \ref{app:legacy}.
+The campaign uses a corrected version of the simulator from the earlier campaigns (Section~\ref{historical-factorial-campaign}). Two corrections apply to every configuration. First, a served or empty target floor is removed when a car stops; the legacy simulator could retain such stale targets and travel to them unnecessarily. Second, the tie-break term $\varepsilon$ in Eq.~\eqref{eq:score} is a counter-based pseudorandom value keyed by seed, time, calling floor and car, so every configuration sees the same values; the legacy simulator drew it from a configuration-specific random stream shared with unused comfort accounting. Contrasts are therefore computed only within the corrected model. An earlier 5,184-run event-recording campaign on the legacy simulator is superseded by this campaign and reported in \ref{app:legacy}.
 
 The grid, configurations and analysis were fixed in a protocol before execution. Six invariant checks and a 26-case development smoke test preceded the run, and the stopping rule permitted only recovery of technically missing cases. No case was excluded or repeated on the basis of performance. Every run's passenger events were reconstructed and checked against its summary, including cohort hashes, group counts, transfer order and restricted waiting.
 
@@ -147,45 +143,24 @@ Every arrival occurs by time 3,599, so $T-a_i\ge 901$ and $R_h$ is fully observe
 
 Destination completion and horizon-accrued waiting, the uncapped mean of $W_i$, are secondary outcomes. Horizon-accrued waiting is a finite-horizon service burden, not an estimate of eventual waiting beyond observation. The horizon sensitivity recomputes $R_h$ from the retained passenger events at $h=300$, 600 and 900, all fully observed, and at $h=1{,}200$ over the 93.81\% of arrivals with at least 1,200 units of follow-up.
 
-\subsection{Paired uncertainty and fairness}\label{paired-uncertainty-and-fairness}
+\subsection{Paired uncertainty}\label{paired-uncertainty-and-fairness}
 
-For the corrected campaign, intervals resample the 108 structural scenarios with all twelve seeds and all configurations kept together, so every contrast is paired. For the historical campaign, they resample 972 structural blocks defined by floors, cars, population, traffic, priority share and carrying share, keeping all three noise levels and twelve seeds together so that invariant noise replicates are not treated as independent evidence. Both use 2,000 bootstrap draws with seed 20261008 and percentile 95\% intervals, without multiplicity correction.
+Intervals resample the 108 structural scenarios with all twelve seeds and all configurations kept together, so every contrast is paired. They use 2,000 bootstrap draws with seed 20261008 and percentile 95\% intervals, without multiplicity correction. The intervals describe variation over the fixed design-scenario composition. The scenarios are not a random sample of real buildings, and the intervals do not quantify model calibration uncertainty. Run-level means receive equal weight, and completion is an average of run-level fractions. Each group's wait is reported directly rather than through a single fairness ratio, because ratios of small waits are unstable (\ref{app:historical}).
 
-The intervals describe variation over the fixed design-scenario composition. The scenarios are not a random sample of real buildings, and the intervals do not quantify model calibration uncertainty. Run-level means receive equal weight. Historical completion fractions are passenger-weighted; corrected-campaign completion is an average of run-level fractions.
+\subsection{Historical factorial campaign}\label{historical-factorial-campaign}
 
-The archived fairness\_disparity field is an average of run-level priority/general waiting ratios with a denominator floor of one, not the ratio of the two aggregate group means, and low general-group waits make it unstable. Each group's wait is therefore reported directly, with ratios of aggregate group means as a separate descriptive quantity. Neither ratio alone defines an appropriate allocation of service.
+An earlier factorial campaign on the legacy simulator provides a cautionary comparison. Seven factors (\ref{app:historical}, Table~\ref{tab:historical}) give 2,916 combinations, which with eight configurations and twelve seeds give 279,936 runs. Each run generates Poisson arrivals with traffic-dependent intensity for 3,600 steps and allows up to 900 clearance steps, with no door or transfer delay. The outputs contain run-level means and counts, not individual waiting or censoring times, so a passenger-level restricted mean cannot be recovered. The campaign is therefore used only to show how completed-trip means behave (Section~\ref{sec:historical-results}). Its intervals use the same bootstrap settings but resample 972 structural blocks defined by floors, cars, population, traffic, priority share and carrying share, keeping all three noise levels and twelve seeds together so that invariant noise replicates are not treated as independent evidence; completion fractions are passenger-weighted. The full experiment history is listed in \ref{app:history}.
 
 \section{Results}\label{results}
 
-\subsection{Completed-trip means in the historical campaign}\label{sec:historical-results}
+\subsection{Rule-level attribution}\label{sec:ablation}
 
-Table~\ref{tab:conditional} presents the principal historical configurations. The historical layered configuration, which added a stability-related dispatch penalty and synthetic exposure accounting to the priority rule, has a conditional mean waiting time of 349.87 units against 369.54 for the collective reference, a reduction of 5.32\% (clustered interval 4.10\% to 6.56\%). The apparent overall gain is carried by priority requests. The layered configuration's general-request wait is 372.40 against 370.81, a paired difference of 1.59 units ($[-8.16, 10.00]$), and its passenger-weighted completion is lower, at 74.45\% against 75.97\% (Figure~\ref{fig:conditional}).
+Table~\ref{tab:ablation} reports the matched-arrival campaign without delays. Priority-first boarding reproduced most of the full rule base's priority benefit (Figure~\ref{fig:ablation}). Relative to the occupancy reference, boarding alone reduced priority restricted waiting by 165.13 units ($[-209.61,-124.04]$) while increasing general-request waiting by 6.26 units ($[4.56,8.20]$). The corresponding full-rule differences were $-165.55$ ($[-209.95,-124.46]$) and $+6.08$ ($[4.27,8.03]$). Dispatch alone changed priority waiting by $-0.02$ units ($[-0.51,0.47]$), and the pickup exception alone by $-0.24$ ($[-0.48,-0.06]$). Boarding alone is therefore sufficient to produce most of the effect in this design; the singleton arms do not show that it is necessary or resolve every interaction among rules.
 
-\begin{longtable}{@{}p{.28\linewidth}rrrr@{}}
-\caption{Historical completed-trip-only waits and passenger-weighted completion.}\label{tab:conditional}\\
-\toprule Configuration & Conditional wait & Priority wait & General wait & Completion (\%)\\\midrule\endhead
-\bottomrule\endlastfoot
-Priority rule & 350.44 & 129.41 & 373.66 & 74.61\\
-Collective reference & 369.54 & 353.46 & 370.81 & 75.97\\
-Historical layered & 349.87 & 133.19 & 372.40 & 74.45\\
-Occupancy rule & 377.12 & 358.40 & 378.49 & 74.84\\
-\end{longtable}
-
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{conditional_contrasts.pdf}
-\caption{Historical layered configuration versus the collective reference. Points are paired differences in completed-trip group means and in passenger-weighted completion; bars are 95\% structural-scenario bootstrap intervals. These conditional differences do not establish an improvement over all arrivals.}\label{fig:conditional}\end{figure}
-
-Because completion differs, the conditional means describe different passenger populations. Without individual observation times, the historical CSV bounds the finite-horizon waiting burden only broadly. For the layered configuration, the completed-trip contribution per generated passenger is 190.43 units, and adding the maximum possible accrued wait for unresolved passengers gives an upper bound of 1,339.76; the corresponding range for the reference is 203.92 to 1,284.97. The ranges overlap, so the data cannot determine which configuration has lower all-arrival waiting. As a sensitivity calculation rather than recovered data, assigning every unresolved passenger 1,000 units gives 445.89 for the layered configuration and 444.21 for the reference, reversing the ordering of passenger-weighted conditional waiting. This is a different aggregation from the 5.32\% run-mean comparison and is not a corrected version of that percentage.
-
-The two fairness summaries also point in opposite directions. The archived mean of run-level ratios rises from 1.00 to 2.48 for the layered configuration, while the ratio of aggregate priority to general means falls from 0.95 to 0.36. The difference arises from the aggregation operations and small denominators, so neither should be read as a measure of improved or worsened fairness. These limitations motivate the restricted mean over all arrivals used in the rest of this section.
-
-\subsection{Component ablation}\label{sec:ablation}
-
-Table~\ref{tab:ablation} reports the corrected campaign without delays. Priority-first boarding reproduced most of the full rule's priority benefit (Figure~\ref{fig:ablation}). Relative to the occupancy reference, boarding alone reduced priority restricted waiting by 165.13 units ($[-209.61,-124.04]$) while increasing general-request waiting by 6.26 units ($[4.56,8.20]$). The corresponding full-rule differences were $-165.55$ ($[-209.95,-124.46]$) and $+6.08$ ($[4.27,8.03]$). Dispatch alone changed priority waiting by $-0.02$ units ($[-0.51,0.47]$), and the pickup exception alone by $-0.24$ ($[-0.48,-0.06]$). Boarding alone is therefore sufficient to produce most of the effect in this design; the singleton arms do not show that it is necessary or resolve every interaction among components.
-
-\begin{longtable}{@{}p{.30\linewidth}rrrr@{}}
-\caption{Corrected-model outcomes without delays. Waiting is restricted to 900 model time units and averaged over all 1,296 runs per configuration.}\label{tab:ablation}\\
-\toprule Configuration & All & Priority & General & Completion (\%)\\\midrule\endhead
-\bottomrule\endlastfoot
+\begin{table}[H]\centering
+\caption{Outcomes without delays. Waiting is restricted to 900 model time units and averaged over all 1,296 runs per configuration.}\label{tab:ablation}
+\small\begin{tabular}{@{}p{.30\linewidth}rrrr@{}}
+\toprule Configuration & All & Priority & General & Completion (\%)\\\midrule
 Occupancy reference & 203.96 & 200.78 & 204.24 & 88.04\\
 Dispatch only & 203.90 & 200.76 & 204.19 & 88.04\\
 Boarding only & 196.81 & 35.65 & 210.50 & 88.06\\
@@ -193,47 +168,53 @@ Pickup exception only & 203.80 & 200.54 & 204.09 & 88.04\\
 Full priority & 196.64 & 35.22 & 210.33 & 88.05\\
 Collective & 205.38 & 202.09 & 205.67 & 88.02\\
 Distance-only nearest car & 226.12 & 222.42 & 226.41 & 87.09\\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\end{table}
 
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{aei_ablation.pdf}
-\caption{Component effects relative to the occupancy-matched reference, without delays. Points show paired differences in 900-unit restricted waiting; horizontal bars show 95\% scenario-bootstrap intervals. Negative values indicate lower waiting, and each panel uses its own scale. Boarding alone yields most of the priority benefit and of the general-request cost; singleton arms do not constitute a complete factorial interaction analysis.}\label{fig:ablation}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{component_ablation.pdf}
+\caption{Rule effects relative to the occupancy-matched reference, without delays. Points show paired differences in 900-unit restricted waiting; horizontal bars show 95\% scenario-bootstrap intervals. Negative values indicate lower waiting, and each panel uses its own scale. Boarding alone yields most of the priority benefit and of the general-request cost; singleton arms do not constitute a complete factorial interaction analysis.}\label{fig:ablation}\end{figure}
 
-The full rule reduced overall restricted waiting by 7.31 units relative to the occupancy reference ($[-10.52,-4.54]$), but changed horizon-accrued waiting by only $+0.36$ ($[-0.53,1.27]$) and overall completion by $+0.016$ percentage points ($[-0.009,0.043]$). Priority completion rose by 11.72 percentage points and general completion fell by 1.10 points. A lower capped mean therefore does not imply better eventual service or higher total throughput. Against collective dispatch, overall restricted waiting fell by 8.73 units ($[-12.01,-5.73]$), while general-request waiting rose by 4.66 ($[1.95,7.27]$).
+The full rule base reduced overall restricted waiting by 7.31 units relative to the occupancy reference ($[-10.52,-4.54]$), but changed horizon-accrued waiting by only $+0.36$ ($[-0.53,1.27]$) and overall completion by $+0.016$ percentage points ($[-0.009,0.043]$). Priority completion rose by 11.72 percentage points and general completion fell by 1.10 points. A lower capped mean therefore does not imply better eventual service or higher total throughput. Against collective dispatch, overall restricted waiting fell by 8.73 units ($[-12.01,-5.73]$), while general-request waiting rose by 4.66 ($[1.95,7.27]$).
 
 \subsection{Door and transfer delays}\label{sec:dwell}
 
 Introducing door and transfer delays increased absolute waiting markedly: collective restricted waiting rose from 205.38 to 357.14 units. The 5,184 runs with delays retained the direction of the priority effect (Table~\ref{tab:dwell}, Figure~\ref{fig:dwell}). Relative to the occupancy reference, full priority reduced priority waiting from 340.66 to 132.51 units, a difference of $-208.15$ ($[-247.76,-170.90]$), or 61.10\%. General waiting rose from 344.38 to 351.64, a difference of $+7.26$ ($[5.34,9.40]$). Overall restricted waiting fell by 8.68 units ($[-11.50,-5.93]$), while the horizon-accrued difference was $-0.84$ ($[-2.51,0.78]$). General completion fell by 1.55 percentage points ($[-2.07,-1.07]$), and the interval for overall completion included zero.
 
-\begin{longtable}{@{}p{.30\linewidth}rrrr@{}}
-\caption{Corrected-model outcomes with five fixed units per stop and one unit per passenger transfer; 1,296 runs per configuration.}\label{tab:dwell}\\
-\toprule Configuration & All & Priority & General & Completion (\%)\\\midrule\endhead
-\bottomrule\endlastfoot
+\begin{table}[H]\centering
+\caption{Outcomes with five fixed units per stop and one unit per passenger transfer; 1,296 runs per configuration.}\label{tab:dwell}
+\small\begin{tabular}{@{}p{.30\linewidth}rrrr@{}}
+\toprule Configuration & All & Priority & General & Completion (\%)\\\midrule
 Occupancy reference & 344.08 & 340.66 & 344.38 & 79.60\\
 Full priority & 335.40 & 132.51 & 351.64 & 79.63\\
 Collective & 357.14 & 353.40 & 357.48 & 78.30\\
 Distance-only nearest car & 363.57 & 359.42 & 363.94 & 78.10\\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\end{table}
 
-\begin{figure}[H]\centering\includegraphics[width=.82\linewidth]{aei_dwell.pdf}
+\begin{figure}[H]\centering\includegraphics[width=.82\linewidth]{delay_contrasts.pdf}
 \caption{Full priority versus collective dispatch without delays and with five fixed units per stop plus one per transfer. Points are paired differences in 900-unit restricted waiting and bars are 95\% scenario-bootstrap intervals, for all, priority and general arrivals. With delays the general-request comparison against collective dispatch changes sign, unlike the general-request cost relative to the occupancy reference (Table~\ref{tab:dwell}).}\label{fig:dwell}\end{figure}
 
-The choice of baseline determines the apparent cost. With delays, full priority also reduced general waiting relative to collective dispatch, by 5.84 units ($[-11.49,-0.74]$), and reduced overall waiting by 21.74 ($[-26.81,-16.82]$). Overall completion rose by 1.33 percentage points ($[0.64,2.14]$), whereas the general completion difference of $-0.25$ points had an interval spanning zero. These combined-rule comparisons do not isolate priority: under delays, the occupancy rules alone reduce general waiting by about 13 units relative to collective dispatch (344.38 against 357.48 in Table~\ref{tab:dwell}), which more than offsets the cost of priority. The occupancy-matched comparison isolates the general-request cost.
+The choice of baseline determines the apparent cost. With delays, full priority also reduced general waiting relative to collective dispatch, by 5.84 units ($[-11.49,-0.74]$), and reduced overall waiting by 21.74 ($[-26.81,-16.82]$). Overall completion rose by 1.33 percentage points ($[0.64,2.14]$), whereas the general completion difference of $-0.25$ points had an interval spanning zero. These combined comparisons do not isolate priority: under delays, the occupancy rules alone reduce general waiting by about 13 units relative to collective dispatch (344.38 against 357.48 in Table~\ref{tab:dwell}), which more than offsets the cost of priority. The occupancy-matched comparison isolates the general-request cost.
 
 \subsection{Priority bonus sensitivity}\label{sec:weights}
 
 All three bonuses produced closely similar restricted waiting (Table~\ref{tab:weights}, Figure~\ref{fig:weights}). Compared with $\beta=2.8$, using $\beta=1.4$ changed priority waiting by $+0.05$ units ($[-0.11,0.24]$) and using $\beta=4.2$ changed it by $-0.11$ ($[-0.34,0.12]$). The corresponding general-request changes were $+0.09$ ($[-0.01,0.22]$) and $-0.03$ ($[-0.14,0.09]$). When priority-first boarding is enabled, the outcome is insensitive to the dispatch bonus within this range. This is bounded evidence, not proof of equivalence outside the tested range, and no bonus was selected after inspecting outcomes.
 
-\begin{longtable}{@{}p{.30\linewidth}rrrr@{}}
-\caption{Bonus sensitivity with all three priority components enabled and no delays.}\label{tab:weights}\\
-\toprule Configuration & All & Priority & General & Completion (\%)\\\midrule\endhead
-\bottomrule\endlastfoot
+\begin{table}[H]\centering
+\caption{Bonus sensitivity with all three priority rules enabled and no delays.}\label{tab:weights}
+\small\begin{tabular}{@{}p{.30\linewidth}rrrr@{}}
+\toprule Configuration & All & Priority & General & Completion (\%)\\\midrule
 Full priority, $\beta=1.4$ & 196.72 & 35.28 & 210.42 & 88.05\\
 Full priority, $\beta=2.8$ & 196.64 & 35.22 & 210.33 & 88.05\\
 Full priority, $\beta=4.2$ & 196.61 & 35.12 & 210.30 & 88.05\\
-\end{longtable}
+\bottomrule
+\end{tabular}
+\end{table}
 
-\begin{figure}[H]\centering\includegraphics[width=\linewidth]{aei_weights.pdf}
-\caption{Restricted-wait differences relative to the occupancy reference at bonus magnitudes $\beta=1.4$, 2.8 and 4.2, with all priority components enabled and no delays. Bars show 95\% scenario-bootstrap intervals. Direct paired intervals for the change between bonus values are reported in Section~\ref{sec:weights}.}\label{fig:weights}\end{figure}
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{bonus_sensitivity.pdf}
+\caption{Restricted-wait differences relative to the occupancy reference at bonus magnitudes $\beta=1.4$, 2.8 and 4.2, with all priority rules enabled and no delays. Bars show 95\% scenario-bootstrap intervals. Direct paired intervals for the change between bonus values are reported in Section~\ref{sec:weights}.}\label{fig:weights}\end{figure}
 
 \subsection{Restricted-horizon sensitivity}\label{restricted-horizon-sensitivity}
 
@@ -261,23 +242,63 @@ Table~\ref{tab:horizon-sensitivity} recomputes the occupancy-matched contrasts a
 \smallskip\parbox{.95\linewidth}{\footnotesize $^{a}$Computed over arrivals with at least 1,200 units of follow-up (93.81\% of arrivals); the other horizons include every arrival.}
 \end{table}
 
+\subsection{What completed-trip means hide}\label{sec:historical-results}
+
+The historical campaign shows how the usual evaluation can misstate the same kind of trade-off. Table~\ref{tab:conditional} presents its principal configurations. The historical layered configuration, which added a stability-related dispatch penalty and synthetic exposure accounting to the priority rule, has a conditional mean waiting time of 349.87 units against 369.54 for the collective reference, a reduction of 5.32\% (clustered interval 4.10\% to 6.56\%). The apparent overall gain is carried by priority requests. The layered configuration's general-request wait is 372.40 against 370.81, a paired difference of 1.59 units ($[-8.16, 10.00]$), and its passenger-weighted completion is lower, at 74.45\% against 75.97\% (Figure~\ref{fig:conditional}).
+
+\begin{table}[H]\centering
+\caption{Historical completed-trip-only waits and passenger-weighted completion.}\label{tab:conditional}
+\small\begin{tabular}{@{}p{.28\linewidth}rrrr@{}}
+\toprule Configuration & Conditional wait & Priority wait & General wait & Completion (\%)\\\midrule
+Priority rule & 350.44 & 129.41 & 373.66 & 74.61\\
+Collective reference & 369.54 & 353.46 & 370.81 & 75.97\\
+Historical layered & 349.87 & 133.19 & 372.40 & 74.45\\
+Occupancy rule & 377.12 & 358.40 & 378.49 & 74.84\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]\centering\includegraphics[width=\linewidth]{conditional_contrasts.pdf}
+\caption{Historical layered configuration versus the collective reference. Points are paired differences in completed-trip group means and in passenger-weighted completion; bars are 95\% structural-scenario bootstrap intervals. These conditional differences do not establish an improvement over all arrivals.}\label{fig:conditional}\end{figure}
+
+Because completion differs, the conditional means describe different passenger populations, and the run-level summaries bound the all-arrival waiting burden only broadly: the bounds for the two configurations overlap (\ref{app:historical}). As a sensitivity calculation rather than recovered data, assigning every unresolved passenger 1,000 units gives 445.89 units for the layered configuration and 444.21 for the reference, reversing the ordering of passenger-weighted conditional waiting. This is a different aggregation from the 5.32\% run-mean comparison and is not a corrected version of that percentage. A completed-trip mean can therefore report an overall gain for a configuration that does not improve service for general requests, which is why the matched-arrival campaign uses the restricted mean over all arrivals.
+
 \section{Discussion}\label{discussion}
 
 \subsection{A service-allocation trade-off}\label{a-service-allocation-trade-off}
 
-In the corrected model, the priority rule produces a large improvement for requests designated for priority service and a smaller, consistent cost for general requests when the occupancy rules are held fixed: 6.08 units without delays and 7.26 units with them. The capped overall mean improves, but horizon-accrued waiting and overall completion show no detectable change, so the rule redistributes service rather than adding capacity. The ablation locates the mechanism in boarding order; within the tested design, the dispatch bonus and the pickup exception contribute little.
+In the corrected model, the priority rules produce a large improvement for requests designated for priority service and a smaller, consistent cost for general requests when the occupancy rules are held fixed: 6.08 units without delays and 7.26 units with them. The capped overall mean improves, but horizon-accrued waiting and overall completion show no detectable change, so the rules redistribute service rather than adding capacity. The ablation locates the mechanism in boarding order; within the tested design, the dispatch bonus and the pickup exception contribute little.
 
 The apparent cost depends on the comparison. Against collective dispatch, the general-request difference changes sign once delays are modelled, because the occupancy rules then shorten service for everyone by more than priority costs general requests. A comparison against a weaker reference can therefore hide the cost of priority. The historical campaign shows a second way the cost can be hidden: completed-trip means reported a 5.32\% overall gain for a combined configuration whose general-request wait did not improve and whose completion was lower.
 
-This clarifies a practical choice. Priority may be justified by an explicit service requirement even when it does not minimise the building-wide mean. A controller should expose that requirement and its cost, rather than hiding the cost inside a composite score or a conditional average. Whether a given cost is acceptable depends on the building's agreed service policy and passenger requirements; the simulation quantifies the trade-off but does not decide that policy.
+Priority may be justified by an explicit service requirement even when it does not minimise the building-wide mean. A controller should then expose that requirement and its cost rather than hide the cost inside a composite score or a conditional average. Whether a given cost is acceptable depends on the building's agreed service policy and passenger requirements; the simulation quantifies the trade-off but does not decide that policy.
 
-\subsection{Representation and practical use}\label{representation-and-scope}
+\subsection{Using the rule base to set a priority policy}\label{sec:policy}
 
-The facts and rules connect count capacity, direction and priority requests to specific actions, and each rule maps to an evaluated outcome (Table~\ref{tab:rules}). This makes three decisions explicit for a building operator: which requests receive priority, through which mechanism (dispatch, pickup or boarding order), and what cost to other passengers is acceptable. Because the ablation attributes most of the effect to boarding order, it suggests that a priority policy could be specified and audited at the boarding rule rather than through dispatch weights. A real implementation would also need a measured capacity representation, calibrated movement and dwell times, and a user-controlled way of requesting appropriate assistance.
+Because each requirement is acted on by a named rule and judged by a named outcome, the results can be read as answers to the decisions a building operator faces when introducing priority service (Table~\ref{tab:policy}). Who receives priority is a policy input, represented here by a supplied request flag; it should come from a user-controlled request for assistance rather than from inference. Which mechanism to use is answered by the attribution: in the tested design, boarding order carries most of the effect, so priority can be specified and audited at the boarding rule rather than through dispatch weights, and within the tested range the bonus magnitude needs no tuning. How much cost to accept is a matter of policy, but it should be measured against an occupancy-matched reference, because comparison with collective dispatch can show a gain for general requests that comes from the occupancy rules rather than from priority. Finally, completion and horizon-accrued waiting by group show whether the rules move service between groups or lose capacity.
+
+\begin{table}[htbp]\centering
+\caption{Priority-policy decisions supported by the rule base and the evidence from this study.}\label{tab:policy}
+\small\begin{tabular}{@{}p{.17\linewidth}p{.20\linewidth}p{.31\linewidth}p{.24\linewidth}@{}}
+\toprule Decision & Rule element & Evidence in this study & What to monitor\\\midrule
+Who receives priority & Request flag $p_i$ & A policy input; priority shares of 2--15\% were tested & Priority share; $R_h$ for each group\\
+Which mechanism & Boarding $[B]$, bonus $[D]$, exception $[E]$ & Boarding alone gives most of the benefit and cost; $D$ and $E$ add little (Section~\ref{sec:ablation}) & $R_h$ by group with each rule switched off\\
+How strong & Bonus $\beta$ & Outcomes are insensitive to $\beta$ between 1.4 and 4.2 when boarding priority is on (Section~\ref{sec:weights}) & No tuning needed within the tested range\\
+What cost is acceptable & General-request $R_h$ & $+6.08$ units without delays and $+7.26$ with delays against the occupancy-matched reference (Sections~\ref{sec:ablation}--\ref{sec:dwell}) & General-request $R_h$ against an occupancy-matched reference, not collective dispatch\\
+Whether capacity is lost & Completion; horizon-accrued waiting & No detectable overall change; general completion falls by 1.10 points without delays and 1.55 with them & Completion and accrued waiting by group\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A real implementation would also need a measured capacity representation that accounts for mobility aids, calibrated movement and dwell times, and a user-controlled way of requesting appropriate assistance. These belong to the facts layer of Figure~\ref{fig:rules} and can be added without changing how the rules are evaluated.
+
+\subsection{Explicit rules and learned dispatchers}\label{explicit-rules-and-learned-dispatchers}
+
+The evaluation does not depend on the rules being hand-written. A learned dispatcher \cite{ref3,wan2026} or a metaheuristic controller \cite{hanif2023,vodopija2022} could be audited in the same way, by reporting restricted waiting for each request group against an occupancy-matched reference and by switching priority mechanisms on and off where the controller allows it. What explicit rules add is attribution: because each requirement is acted on by a named rule, the ablation can say which rule produced the benefit and which produced the cost. For a learned policy, the same question requires a counterfactual analysis of the policy itself. Explicit rules and learned controllers are therefore complementary: the former can define the requirements and audit outcomes that the latter are expected to meet.
 
 \subsection{Limitations and generality}\label{limitations-and-generality}
 
-The rule set is fixed and hand-specified. It is not a learned policy or a general knowledge-reasoning formalism, and because the closest published methods \cite{ref1,ref3,ref5} were not reimplemented, no claim of superiority over them is made. The one-floor-per-step movement model limits transfer to real installations, and the fixed-plus-transfer delay model is uncalibrated: it tests robustness to one simple assumption, not the full range of real door-service times. The five-arm ablation omits paired-component arms, and bonus sensitivity was tested only without delays, so interactions among components and between delay and bonus are not fully identified.
+The rule set is fixed and hand-specified. It is not a learned policy or a general knowledge-reasoning formalism, and because the closest published methods \cite{ref1,ref3,ref5} were not reimplemented, no claim of superiority over them is made. The one-floor-per-step movement model limits transfer to real installations, and the fixed-plus-transfer delay model is uncalibrated: it tests robustness to one simple assumption, not the full range of real door-service times. The five-arm ablation omits paired-rule arms, and bonus sensitivity was tested only without delays, so interactions among rules and between delay and bonus are not fully identified.
 
 The scenarios cover diagonal floor/car combinations rather than the full historical grid, with fixed carrying and noise levels. Population controls arrival intensity and is not a closed census of occupants. A binary priority indicator omits individual preferences and the space required by mobility aids, and no claim is made that wheelchair occupancy, disability or a camera-derived attribute predicts passenger instability. Physical sensing, motion control and visual or spoken interaction are outside the evaluated mechanism. The restricted horizon is a reporting choice rather than a claim about eventual service, so completion and horizon-accrued waiting are reported alongside it. The bootstrap describes variation over the tested scenario composition, not uncertainty about deployment performance.
 
@@ -285,9 +306,9 @@ Exact replay depends on the Python version, because equidistant movement targets
 
 \section{Conclusions}\label{conclusions}
 
-Explicit occupancy and priority rules change how a coordinated lift group allocates service. In a corrected 16,848-run campaign with matched arrivals, priority-first boarding alone generates most of the reduction in priority-request waiting and most of the added waiting for general requests. With door and transfer delays, full priority reduces priority-request restricted waiting by 208.15 units (61.10\%) relative to an occupancy-matched reference and increases general-request waiting by 7.26 units. The pattern holds at horizons from 300 to 1,200 units and across three dispatch bonuses. The capped overall mean falls, but horizon-accrued waiting and overall completion do not change detectably, so the rule reallocates service rather than adding capacity. Against collective dispatch, general-request waiting falls instead, which shows that the chosen baseline determines the apparent cost.
+Representing passenger requirements as explicit dispatch, pickup and boarding rules makes it possible to say which rule changes how a lift group allocates service, and to whom. In a 16,848-run campaign with matched arrivals, priority-first boarding alone generates most of the reduction in priority-request waiting and most of the added waiting for general requests. With door and transfer delays, the full rule base reduces priority-request restricted waiting by 208.15 units (61.10\%) relative to an occupancy-matched reference and increases general-request waiting by 7.26 units. The pattern holds at horizons from 300 to 1,200 units and across three dispatch bonuses. The capped overall mean falls, but horizon-accrued waiting and overall completion do not change detectably, so the rules reallocate service rather than adding capacity. Against collective dispatch, general-request waiting falls instead, which shows that the chosen baseline determines the apparent cost.
 
-The methodological result is that completed-trip means can misstate such trade-offs. In the historical campaign they reported an overall gain for a configuration with unchanged general-request waiting and lower completion. A restricted mean over all arrivals, reported by request group alongside completion, shows who gains and who bears the cost.
+The evaluation result is that completed-trip means can misstate such trade-offs. In the historical campaign they reported an overall gain for a configuration with unchanged general-request waiting and lower completion. A restricted mean over all arrivals, reported by request group alongside completion and against an occupancy-matched reference, shows who gains and who bears the cost. Together, the rule base and this evaluation turn priority service into an explicit decision that a building operator can specify, audit and revise.
 
 \section{Data and code availability}\label{data-and-code-availability}
 

@@ -5,6 +5,39 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{hanif2023}
+M.~Hanif, N.~Mohammad, {Metaheuristic algorithms for elevator group control
+  system: a holistic review}, Soft Computing 27 (2023) 15905--15936.
+\newblock \href {https://doi.org/10.1007/s00500-023-08843-0}
+  {\path{doi:10.1007/s00500-023-08843-0}}.
+
+\bibitem{vodopija2022}
+A.~Vodopija, J.~Stork, T.~Bartz-Beielstein, B.~Filipič, {Elevator group
+  control as a constrained multiobjective optimization problem}, Applied Soft
+  Computing 115 (2022) 108277.
+\newblock \href {https://doi.org/10.1016/j.asoc.2021.108277}
+  {\path{doi:10.1016/j.asoc.2021.108277}}.
+
+\bibitem{beamurgia2022}
+M.~Beamurgia, R.~Basagoiti, I.~Rodríguez, V.~Rodríguez, {Improving waiting
+  time and energy consumption performance of a bi-objective genetic algorithm
+  embedded in an elevator group control system through passenger flow
+  estimation}, Soft Computing 26 (2022) 13673--13692.
+\newblock \href {https://doi.org/10.1007/s00500-022-07358-4}
+  {\path{doi:10.1007/s00500-022-07358-4}}.
+
+\bibitem{ref3}
+J.~Wan, K.~Lee, H.~Shin, {Traffic pattern-aware elevator dispatching via deep
+  reinforcement learning}, Advanced Engineering Informatics 61 (2024) 102497.
+\newblock \href {https://doi.org/10.1016/j.aei.2024.102497}
+  {\path{doi:10.1016/j.aei.2024.102497}}.
+
+\bibitem{wan2026}
+J.~Wan, K.~Lee, H.~Shin, {A Hybrid Approach of Imitation Learning and Deep
+  Reinforcement Learning with Direct-Effect Update Interval for Elevator
+  Dispatching}, ACM Transactions on Cyber-Physical Systems 10 (2026) 1--19.
+\newblock \href {https://doi.org/10.1145/3790252} {\path{doi:10.1145/3790252}}.
+
 \bibitem{ref1}
 S.~Wang, X.~Gong, M.~Song, C.~Y. Fei, S.~Quaadgras, J.~Peng, P.~Zou, J.~Chen,
   W.~Zhang, R.~J. Jiao, {Smart dispatching and optimal elevator group control
@@ -12,12 +45,6 @@ S.~Wang, X.~Gong, M.~Song, C.~Y. Fei, S.~Quaadgras, J.~Peng, P.~Zou, J.~Chen,
   Engineering Informatics 48 (2021) 101286.
 \newblock \href {https://doi.org/10.1016/j.aei.2021.101286}
   {\path{doi:10.1016/j.aei.2021.101286}}.
-
-\bibitem{ref3}
-J.~Wan, K.~Lee, H.~Shin, {Traffic pattern-aware elevator dispatching via deep
-  reinforcement learning}, Advanced Engineering Informatics 61 (2024) 102497.
-\newblock \href {https://doi.org/10.1016/j.aei.2024.102497}
-  {\path{doi:10.1016/j.aei.2024.102497}}.
 
 \bibitem{ref5}
 W.~Han, A.~Y. Chen, N.-W. Chi, S.-H. Hsieh, {Elevator priority scheduling with
@@ -87,6 +114,32 @@ P.~Cortés, J.~Muñuzuri, A.~Vázquez-Ledesma, L.~Onieva, {Double deck elevator
 \newblock \href {https://doi.org/10.1016/j.cie.2021.107190}
   {\path{doi:10.1016/j.cie.2021.107190}}.
 
+\bibitem{wu2024}
+Y.~Wu, J.~Yang, {Directional optimization of elevator scheduling algorithms in
+  complex traffic patterns}, Applied Soft Computing 158 (2024) 111567.
+\newblock \href {https://doi.org/10.1016/j.asoc.2024.111567}
+  {\path{doi:10.1016/j.asoc.2024.111567}}.
+
+\bibitem{gharbi2024}
+A.~Gharbi, {Exploring Heuristic and Optimization Approaches for Elevator Group
+  Control Systems}, Applied Sciences 14 (2024) 995.
+\newblock \href {https://doi.org/10.3390/app14030995}
+  {\path{doi:10.3390/app14030995}}.
+
+\bibitem{ref27}
+J.~Sorsa, H.~Ehtamo, J.-M. Kuusinen, M.~Ruokokoski, M.-L. Siikonen, {Modeling
+  uncertain passenger arrivals in the elevator dispatching problem with
+  destination control}, Optimization Letters 12 (2018) 171--185.
+\newblock \href {https://doi.org/10.1007/s11590-017-1130-0}
+  {\path{doi:10.1007/s11590-017-1130-0}}.
+
+\bibitem{siikonen2026}
+M.-L. Siikonen, A.~T. So, {Verification of equations for up-peak traffic
+  analysis of elevator destination control system based on calculation and
+  simulation}, Building Services Engineering Research and Technology (2026).
+\newblock \href {https://doi.org/10.1177/01436244261469054}
+  {\path{doi:10.1177/01436244261469054}}.
+
 \bibitem{ref17}
 T.~Yamauchi, R.~Ide, T.~Sugawara, {Fair and Effective Elevator Car Dispatching
   Method in Elevator Group Control System using Cameras}, Procedia Computer
@@ -121,19 +174,77 @@ D.~Li, C.~C. Menassa, V.~R. Kamat, {Robust non-intrusive interpretation of
 \newblock \href {https://doi.org/10.1016/j.apenergy.2019.113336}
   {\path{doi:10.1016/j.apenergy.2019.113336}}.
 
+\bibitem{yang2022}
+L.-H. Yang, J.~Liu, F.-F. Ye, Y.-M. Wang, C.~Nugent, H.~Wang, L.~Martínez,
+  {Highly explainable cumulative belief rule-based system with effective
+  rule-base modeling and inference scheme}, Knowledge-Based Systems 240 (2022)
+  107805.
+\newblock \href {https://doi.org/10.1016/j.knosys.2021.107805}
+  {\path{doi:10.1016/j.knosys.2021.107805}}.
+
+\bibitem{xiong2024}
+H.~Xiong, H.~Wang, S.~Shi, K.~Chen, {Comparison study of dispatching rules and
+  heuristics for online scheduling of single machine scheduling problem with
+  predicted release time jobs}, Expert Systems with Applications 243 (2024)
+  122752.
+\newblock \href {https://doi.org/10.1016/j.eswa.2023.122752}
+  {\path{doi:10.1016/j.eswa.2023.122752}}.
+
+\bibitem{mao2024}
+H.~Mao, J.~Yuan, {The performance of priority rules for the decentralized
+  resource-constrained multi-project scheduling}, Knowledge-Based Systems 304
+  (2024) 112530.
+\newblock \href {https://doi.org/10.1016/j.knosys.2024.112530}
+  {\path{doi:10.1016/j.knosys.2024.112530}}.
+
+\bibitem{luo2022}
+J.~Luo, M.~Vanhoucke, J.~Coelho, W.~Guo, {An efficient genetic programming
+  approach to design priority rules for resource-constrained project scheduling
+  problem}, Expert Systems with Applications 198 (2022) 116753.
+\newblock \href {https://doi.org/10.1016/j.eswa.2022.116753}
+  {\path{doi:10.1016/j.eswa.2022.116753}}.
+
+\bibitem{barut2024}
+C.~Barut, G.~Yildirim, Y.~Tatar, {An intelligent and interpretable rule-based
+  metaheuristic approach to task scheduling in cloud systems}, Knowledge-Based
+  Systems 284 (2024) 111241.
+\newblock \href {https://doi.org/10.1016/j.knosys.2023.111241}
+  {\path{doi:10.1016/j.knosys.2023.111241}}.
+
+\bibitem{tang2026}
+J.~Tang, Y.~Zheng, {An optimization model for rescue team deployment in
+  geological disaster considering priority and fairness}, Knowledge-Based
+  Systems 352 (2026) 116912.
+\newblock \href {https://doi.org/10.1016/j.knosys.2026.116912}
+  {\path{doi:10.1016/j.knosys.2026.116912}}.
+
+\bibitem{martinez2024}
+A.~Martínez-Sykora, F.~McLeod, T.~Cherrett, A.~Friday, {Exploring fairness in
+  food delivery routing and scheduling problems}, Expert Systems with
+  Applications 240 (2024) 122488.
+\newblock \href {https://doi.org/10.1016/j.eswa.2023.122488}
+  {\path{doi:10.1016/j.eswa.2023.122488}}.
+
+\bibitem{ala2022}
+A.~Ala, V.~Simic, D.~Pamucar, E.~B. Tirkolaee, {Appointment Scheduling Problem
+  under Fairness Policy in Healthcare Services: Fuzzy Ant Lion Optimizer},
+  Expert Systems with Applications 207 (2022) 117949.
+\newblock \href {https://doi.org/10.1016/j.eswa.2022.117949}
+  {\path{doi:10.1016/j.eswa.2022.117949}}.
+
+\bibitem{so2022}
+A.~So, L.~Al-Sharif, R.~Chan, {Universal elevator round trip time calculation
+  for general traffic conditions with extension to batch arrivals}, Building
+  Services Engineering Research and Technology 43 (2022) 539--557.
+\newblock \href {https://doi.org/10.1177/01436244221095195}
+  {\path{doi:10.1177/01436244221095195}}.
+
 \bibitem{ref14}
 J.~Page, D.~Robinson, N.~Morel, J.-L. Scartezzini, {A generalised stochastic
   model for the simulation of occupant presence}, Energy and Buildings 40
   (2008) 83--98.
 \newblock \href {https://doi.org/10.1016/j.enbuild.2007.01.018}
   {\path{doi:10.1016/j.enbuild.2007.01.018}}.
-
-\bibitem{ref27}
-J.~Sorsa, H.~Ehtamo, J.-M. Kuusinen, M.~Ruokokoski, M.-L. Siikonen, {Modeling
-  uncertain passenger arrivals in the elevator dispatching problem with
-  destination control}, Optimization Letters 12 (2018) 171--185.
-\newblock \href {https://doi.org/10.1007/s11590-017-1130-0}
-  {\path{doi:10.1007/s11590-017-1130-0}}.
 
 \bibitem{ref22}
 S.~C. Chu, C.~Lin, S.~Lam, {Hospital lift system simulator: A performance
@@ -156,78 +267,18 @@ T.~Miyamoto, S.~Yamaguchi, {MceSim: A Multi-Car Elevator Simulator}, IEICE
 \newblock \href {https://doi.org/10.1093/ietfec/e91-a.11.3207}
   {\path{doi:10.1093/ietfec/e91-a.11.3207}}.
 
-\bibitem{ref30}
-S.~Aheleroff, X.~Xu, R.~Y. Zhong, Y.~Lu, {Digital Twin as a Service (DTaaS) in
-  Industry 4.0: An Architecture Reference Model}, Advanced Engineering
-  Informatics 47 (2021) 101225.
-\newblock \href {https://doi.org/10.1016/j.aei.2020.101225}
-  {\path{doi:10.1016/j.aei.2020.101225}}.
+\bibitem{tartan2024}
+E.~O. Tartan, C.~Çiflikli, {Esra (elevator simulation, research \& analysis):
+  an open-source software tool for elevator traffic simulation, research, and
+  analysis}, Journal of Simulation 18 (2024) 868--885.
+\newblock \href {https://doi.org/10.1080/17477778.2024.2330432}
+  {\path{doi:10.1080/17477778.2024.2330432}}.
 
-\bibitem{ref31}
-M.~Liu, S.~Fang, H.~Dong, C.~Xu, {Review of digital twin about concepts,
-  technologies, and industrial applications}, Journal of Manufacturing Systems
-  58 (2021) 346--361.
-\newblock \href {https://doi.org/10.1016/j.jmsy.2020.06.017}
-  {\path{doi:10.1016/j.jmsy.2020.06.017}}.
-
-\bibitem{ref2}
-Y.~Gao, D.~Chang, C.-H. Chen, Z.~Xu, {Design of digital twin applications in
-  automated storage yard scheduling}, Advanced Engineering Informatics 51
-  (2022) 101477.
-\newblock \href {https://doi.org/10.1016/j.aei.2021.101477}
-  {\path{doi:10.1016/j.aei.2021.101477}}.
-
-\bibitem{ref4}
-H.~Tong, J.~Zhu, B.~Wu, Z.~Ma, {An information freshness-based digital twin
-  model to support multi-level complementary dynamic scheduling in Shared
-  Manufacturing}, Advanced Engineering Informatics 61 (2024) 102525.
-\newblock \href {https://doi.org/10.1016/j.aei.2024.102525}
-  {\path{doi:10.1016/j.aei.2024.102525}}.
-
-\bibitem{ref10}
-Y.~Yin, B.~Yang, S.~Wang, L.~Kang, Q.~Peng, {A multi-layer dynamic production
-  scheduling method for manufacturing systems with cloud-edge-end
-  architecture}, Advanced Engineering Informatics 69 (2026) 103961.
-\newblock \href {https://doi.org/10.1016/j.aei.2025.103961}
-  {\path{doi:10.1016/j.aei.2025.103961}}.
-
-\bibitem{ref7}
-J.~Wang, Y.~Yan, Y.~Hu, X.~Yang, {A reinforcement learning from human feedback
-  based method for task allocation of human robot collaboration assembly
-  considering human preference}, Advanced Engineering Informatics 66 (2025)
-  103497.
-\newblock \href {https://doi.org/10.1016/j.aei.2025.103497}
-  {\path{doi:10.1016/j.aei.2025.103497}}.
-
-\bibitem{ref8}
-X.~Liang, L.~Sheng, J.~Cai, {Contexts Matter: Robot-Aware 3D human motion
-  prediction for Agentic AI-empowered Human-Robot collaboration}, Advanced
-  Engineering Informatics 68 (2025) 103591.
-\newblock \href {https://doi.org/10.1016/j.aei.2025.103591}
-  {\path{doi:10.1016/j.aei.2025.103591}}.
-
-\bibitem{ref9}
-Y.~Hua, K.~Li, R.~Wang, Y.~Li, G.~Wang, Y.~Yan, {Integration of dynamic
-  knowledge and LLM for adaptive human-robot collaborative assembly solution
-  generation}, Advanced Engineering Informatics 68 (2025) 103613.
-\newblock \href {https://doi.org/10.1016/j.aei.2025.103613}
-  {\path{doi:10.1016/j.aei.2025.103613}}.
-
-\bibitem{ref32}
-E.~Merlo, E.~Lamon, F.~Fusaro, M.~Lorenzini, A.~Carfì, F.~Mastrogiovanni,
-  A.~Ajoudani, {An ergonomic role allocation framework for dynamic
-  human–robot collaborative tasks}, Journal of Manufacturing Systems 67
-  (2023) 111--121.
-\newblock \href {https://doi.org/10.1016/j.jmsy.2022.12.011}
-  {\path{doi:10.1016/j.jmsy.2022.12.011}}.
-
-\bibitem{ref6}
-Z.~Zhang, W.~Zhang, T.~Nong, T.~Wang, J.~Tan, E.~W.~M. Lee, M.~Shi, {Adaptive
-  exit choices of pedestrians during emergency evacuation: A study combining
-  virtual experiments, survey and modelling}, Advanced Engineering Informatics
-  65 (2025) 103302.
-\newblock \href {https://doi.org/10.1016/j.aei.2025.103302}
-  {\path{doi:10.1016/j.aei.2025.103302}}.
+\bibitem{shiomi2025}
+M.~Shiomi, M.~Kakio, T.~Miyashita, {How long is too long? Examining waiting
+  times and stress in human-elevator interaction}, PeerJ 13 (2025) e19913.
+\newblock \href {https://doi.org/10.7717/peerj.19913}
+  {\path{doi:10.7717/peerj.19913}}.
 
 \bibitem{refRMST}
 P.~Royston, M.~K.~B. Parmar, {Restricted mean survival time: an alternative to
